@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sophisticated Portfolio - Refined Scale</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Playfair+Display:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #050507; /* Deeper black */
+            color: #e0e0e0;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Starry Background Implementation */
+        #stars-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%);
+            opacity: 0.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            letter-spacing: 5px;
+            color: #d4af37;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            color: rgba(212, 175, 55, 0.7);
+            text-transform: uppercase;
+        }
+
+        .gallery-grid {
+            display: grid;
+            /* Smaller minmax value for smaller placeholders */
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+            padding: 0 10% 80px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .painting-slot {
+            position: relative;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .painting-slot img {
+            width: 100%;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+        }
+
+        .painting-slot:hover {
+            transform: scale(1.03);
+            border: 1px solid #d4af37;
+            background: rgba(212, 175, 55, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .label {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: #ffffff;
+            font-size: 1.1rem;
+            -webkit-text-stroke: 1px black;
+            text-stroke: 1px black;
+            paint-order: stroke fill;
+            text-align: center;
+            padding: 12px 8px;
+            background: rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .painting-slot:hover .label {
+            background: rgba(0, 0, 0, 0.5);
+            -webkit-text-stroke: 1.2px black;
+            text-stroke: 1.2px black;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="stars-container"></div>
+
+    <header>
+        <h1>The Alphabet Suite</h1>
+        <p>A Curated Exhibition</p>
+    </header>
+
+    <main class="gallery-grid">
+        <div class="painting-slot"><img src="Abyssal Dawn.jpg" alt="Abyssal Dawn"><span class="label">Abyssal Dawn</span></div>
+        <div class="painting-slot"><img src="ARTIC DRIFT.jpg" alt="Arctic Drift"><span class="label">Arctic Drift</span></div>
+        <div class="painting-slot"><img src="Astraea's Bloom.jpg" alt="Astraea's Bloom"><span class="label">Astraea's Bloom</span></div>
+        <div class="painting-slot"><img src="Aurelian Surge.JPG" alt="Aurelian Surge"><span class="label">Aurelian Surge</span></div>
+        <div class="painting-slot"><img src="Bismuth Bloom.jpg" alt="Bismuth Bloom"><span class="label">Bismuth Bloom</span></div>
+        <div class="painting-slot"><img src="Bloodline Echo.jpg" alt="Bloodline Echo"><span class="label">Bloodline Echo</span></div>
+        <div class="painting-slot"><img src="Bloomquake . - Copy.JPG" alt="Bloomquake"><span class="label">Bloomquake</span></div>
+        <div class="painting-slot"><img src="Cinder's River.jpg" alt="Cinder's River"><span class="label">Cinder's River</span></div>
+        <div class="painting-slot"><img src="Desert Veins.JPG" alt="Desert Veins"><span class="label">Desert Veins</span></div>
+        <div class="painting-slot"><img src="Driftwood Void.jpg" alt="Driftwood Void"><span class="label">Driftwood Void</span></div>
+        <div class="painting-slot"><img src="Emerald Zenith.jpg" alt="Emerald Zenith"><span class="label">Emerald Zenith</span></div>
+        <div class="painting-slot"><img src="FLORAL KINETIC.jpg" alt="Floral Kinetic"><span class="label">Floral Kinetic</span></div>
+        <div class="painting-slot"><img src="Frost's Heart.jpg" alt="Frost's Heart"><span class="label">Frost's Heart</span></div>
+        <div class="painting-slot"><img src="Gilded Moss.JPG" alt="Gilded Moss"><span class="label">Gilded Moss</span></div>
+        <div class="painting-slot"><img src="Ignis Fatuus.JPG" alt="Ignis Fatuus"><span class="label">Ignis Fatuus</span></div>
+        <div class="painting-slot"><img src="Kinetic Flow.JPG" alt="Kinetic Flow"><span class="label">Kinetic Flow</span></div>
+        <div class="painting-slot"><img src="Luminous Lagoon .JPG" alt="Luminous Lagoon"><span class="label">Luminous Lagoon</span></div>
+        <div class="painting-slot"><img src="Magenta Monsoon (2).JPG" alt="Magenta Monsoon"><span class="label">Magenta Monsoon</span></div>
+        <div class="painting-slot"><img src="Magma's Embrace.JPG" alt="Magma's Embrace"><span class="label">Magma's Embrace</span></div>
+        <div class="painting-slot"><img src="Midnight Estuary.jpg" alt="Midnight Estuary"><span class="label">Midnight Estuary</span></div>
+        <div class="painting-slot"><img src="Midnight Petals.JPG" alt="Midnight Petals"><span class="label">Midnight Petals</span></div>
+        <div class="painting-slot"><img src="Shallow Reef Pulse.JPG" alt="Shallow Reef Pulse"><span class="label">Shallow Reef Pulse</span></div>
+        <div class="painting-slot"><img src="SOLAR BLOOM.jpg" alt="Solar Bloom"><span class="label">Solar Bloom</span></div>
+        <div class="painting-slot"><img src="Solar Echoes.jpeg" alt="Solar Echoes"><span class="label">Solar Echoes</span></div>
+        <div class="painting-slot"><img src="Tide Pool Rhythms.jpg" alt="Tide Pool Rhythms"><span class="label">Tide Pool Rhythms</span></div>
+        <div class="painting-slot"><img src="Verdant Veil.JPG" alt="Verdant Veil"><span class="label">Verdant Veil</span></div>
+    </main>
+</body>
+</html>
