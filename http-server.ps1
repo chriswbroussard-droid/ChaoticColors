@@ -31,9 +31,6 @@ while ($listener.IsListening) {
         $filePath = Join-Path $folder $cleanPath
         
         if (Test-Path $filePath -PathType Leaf) {
-            $fileBytes = [System.IO.File]::ReadAllBytes($filePath)
-            $response.ContentLength64 = $fileBytes.Length
-            
             # Set content type based on file extension
             $ext = [System.IO.Path]::GetExtension($filePath).ToLower()
             switch ($ext) {
@@ -48,15 +45,21 @@ while ($listener.IsListening) {
                 default { $response.ContentType = "application/octet-stream" }
             }
             
+            $fileBytes = [System.IO.File]::ReadAllBytes($filePath)
+            $response.ContentLength64 = $fileBytes.Length
+            $response.StatusCode = 200
             $response.OutputStream.Write($fileBytes, 0, $fileBytes.Length)
+            $response.OutputStream.Flush()
         } else {
             $response.StatusCode = 404
             $response.ContentType = "text/plain"
             $bytes = [Text.Encoding]::UTF8.GetBytes("404 Not Found")
+            $response.ContentLength64 = $bytes.Length
             $response.OutputStream.Write($bytes, 0, $bytes.Length)
+            $response.OutputStream.Flush()
         }
         
-        $response.OutputStream.Close()
+        $response.Close()
     } catch {
         Write-Host "Error: $_"
     }
