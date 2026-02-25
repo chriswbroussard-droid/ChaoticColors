@@ -286,6 +286,55 @@
     <script>
       // Year + smooth-scroll buttons + mock submit + lightbox
       document.getElementById("year").textContent = new Date().getFullYear();
+      const squareBuyLinks = {
+        'kinetic flow': 'https://square.link/u/Uguj9mac',
+        'aurelian surge': 'https://square.link/u/A40c8z4T',
+        "frost's heart": 'https://square.link/u/qNQMr2JF',
+        'frosts heart': 'https://square.link/u/qNQMr2JF',
+        'verdant veil': 'https://square.link/u/wLRSq970',
+        'floral kinetic': 'https://square.link/u/UCvfqPJ6',
+        'cerulean swirl': 'https://square.link/u/AyrOrAK9',
+        'solar bloom': 'https://square.link/u/AyrOrAK9',
+        'abyssal dawn': 'https://square.link/u/JASryG7g',
+        'abyssal  dawn': 'https://square.link/u/JASryG7g',
+        'twilight tides': 'https://square.link/u/qCrjY7wh',
+        'gilded moss': 'https://square.link/u/JJWQkaqq',
+        'guilded moss': 'https://square.link/u/JJWQkaqq',
+        'bloomquake': 'https://square.link/u/7V4CY9pq',
+        'bloomquake .': 'https://square.link/u/7V4CY9pq',
+        'celestial bloom': 'https://square.link/u/aq2zRPpV',
+        'abyssal ridge': 'https://square.link/u/Ewj9cOfY',
+        'cerulean vortex': 'https://square.link/u/usSWCELh',
+        'luminous lagoon': 'https://square.link/u/OEaEHyuh',
+        'luminous lagoon .': 'https://square.link/u/OEaEHyuh'
+      };
+
+      function getSquareLinkForTitle(title) {
+        return squareBuyLinks[(title || '').trim().toLowerCase()] || '';
+      }
+
+      function addBuyButtons() {
+        document.querySelectorAll('img.lightbox').forEach((img) => {
+          const figure = img.closest('figure');
+          const figcaption = figure ? figure.querySelector('figcaption') : null;
+          if (!figcaption || figcaption.querySelector('.buy-art-btn')) return;
+
+          const titleEl = figcaption.querySelector('h3, h4');
+          const artworkTitle = titleEl ? titleEl.textContent.trim() : '';
+          const pieceSquareLink = getSquareLinkForTitle(artworkTitle);
+          if (!pieceSquareLink) return;
+
+          const buyButton = document.createElement('a');
+          buyButton.href = pieceSquareLink;
+          buyButton.target = '_blank';
+          buyButton.rel = 'noopener noreferrer';
+          buyButton.className = 'buy-art-btn mt-3 inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-white/20';
+          buyButton.textContent = 'Buy on Square';
+          figcaption.appendChild(buyButton);
+        });
+      }
+
+      addBuyButtons();
 
       document.querySelectorAll("[data-scroll]").forEach((btn) => {
         btn.addEventListener("click", () => {
