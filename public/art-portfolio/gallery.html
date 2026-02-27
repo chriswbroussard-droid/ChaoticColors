@@ -350,11 +350,41 @@
         'abyssal ridge': 'https://square.link/u/Ewj9cOfY',
         'cerulean vortex': 'https://square.link/u/usSWCELh',
         'luminous lagoon': 'https://square.link/u/OEaEHyuh',
-        'luminous lagoon .': 'https://square.link/u/OEaEHyuh'
+        'luminous lagoon .': 'https://square.link/u/OEaEHyuh',
+        'celestial current': 'https://square.link/u/lHUyPXNt',
+        'crystalline strata': 'https://square.link/u/4oPASJlO',
+        'emerald lattice': 'https://square.link/u/qCrjY7wh',
+        'amethyst abyss': 'https://square.link/u/7WeF0llL',
+        'arctic fracture': 'https://square.link/u/CJYb5XgO',
+        'artic fracture': 'https://square.link/u/CJYb5XgO',
+        "leviathan's armor": 'https://square.link/u/faM3DjOJ',
+        'leviathans armor': 'https://square.link/u/faM3DjOJ',
+        'laviathans armor': 'https://square.link/u/faM3DjOJ',
+        'crimson current': 'https://square.link/u/7EYQ7flT',
+        'azure ember': 'https://square.link/u/O8OrfonY',
+        'bismuth bloom': 'https://square.link/u/66aa8T9f',
+        'indigo marrow': 'https://square.link/u/YotuLopu',
+        'magenta monsoon': 'https://square.link/u/ZbwomOFA'
       };
 
+      function normalizeArtworkTitle(title) {
+        return (title || '')
+          .toLowerCase()
+          .replace(/[’]/g, "'")
+          .replace(/\([^)]*\)/g, ' ')
+          .replace(/\s*-\s*(acrylic|pour)\s+painting.*$/, '')
+          .replace(/[^a-z0-9'\s]/g, ' ')
+          .replace(/\s+/g, ' ')
+          .trim();
+      }
+
+      const normalizedSquareBuyLinks = Object.fromEntries(
+        Object.entries(squareBuyLinks).map(([title, link]) => [normalizeArtworkTitle(title), link])
+      );
+
       function getSquareLinkForTitle(title) {
-        return squareBuyLinks[(title || '').trim().toLowerCase()] || '';
+        const normalizedTitle = normalizeArtworkTitle(title);
+        return normalizedSquareBuyLinks[normalizedTitle] || '';
       }
 
       function addBuyButtons() {
@@ -364,7 +394,8 @@
           if (!figcaption || figcaption.querySelector('.buy-art-btn')) return;
 
           const titleEl = figcaption.querySelector('h3, h4');
-          const artworkTitle = titleEl ? titleEl.textContent.trim() : '';
+          const altTitle = ((img.getAttribute('alt') || '').split(' - ')[0] || '').trim();
+          const artworkTitle = titleEl ? titleEl.textContent.trim() : altTitle;
           const pieceSquareLink = getSquareLinkForTitle(artworkTitle);
           if (!pieceSquareLink) return;
 
@@ -378,7 +409,12 @@
         });
       }
 
-      addBuyButtons();
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', addBuyButtons);
+      } else {
+        addBuyButtons();
+      }
+      setTimeout(addBuyButtons, 0);
 
       document.getElementById("contactForm").addEventListener("submit", (e) => {
         e.preventDefault();
