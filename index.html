@@ -88,7 +88,7 @@
       </section>
 
       <section class="mx-auto max-w-6xl px-4 pb-12 sm:px-6">
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
               <img src="30 portfolio/mockup images/baefed30-07bf-11f1-a0b0-6577dcc1f784.jpg?v=20260217a" alt="Mockup 1" class="h-full w-full object-contain" loading="lazy" />
@@ -122,11 +122,11 @@
             A curated selection of recent work.
           </p>
           <p class="mt-1 text-xs text-white/50">
-            Click any artwork to see the mockup view.
+            Click any mockup to see the original artwork.
           </p>
         </div>
 
-        <div id="gallery" class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div id="gallery" class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
               <img src="30 portfolio/Molecular Flux/Kinetic Flow.JPG?v=20260217b" alt="Kinetic Flow - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="30 portfolio/mockup images/Kinetic Flow 2.jpg" loading="lazy" />
@@ -217,7 +217,7 @@
 
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="30 portfolio/Aqueous Vibrations/Abyssal Dawn.jpg?v=20260217a" alt="Abyssal Dawn - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="30 portfolio/mockup images/Abyssal Dawn2.jpg" loading="lazy" />
+              <img src="30 portfolio/Aqueous Vibrations/Abyssal Dawn.jpg?v=20260217a" alt="Abyssal Dawn - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="30 portfolio/mockup images/Abyssal Dawn.jpg" loading="lazy" />
             </div>
             <figcaption class="p-4">
               <h4 class="text-sm font-semibold text-white">Abyssal Dawn</h4>
@@ -519,18 +519,26 @@
         lightboxMock.alt = '';
       }
 
+      function addCacheBuster(path) {
+        const separator = path.includes('?') ? '&' : '?';
+        return `${path}${separator}v=${new Date().getTime()}`;
+      }
+
+      document.querySelectorAll('img.lightbox[data-mock]').forEach(img => {
+        const originalArtSrc = img.getAttribute('src');
+        const mockSrc = img.getAttribute('data-mock');
+        if (!originalArtSrc || !mockSrc) return;
+
+        img.setAttribute('data-art', originalArtSrc);
+        img.setAttribute('src', addCacheBuster(encodeURI(mockSrc)));
+      });
+
       document.querySelectorAll('img.lightbox').forEach(img => {
-        // Skip mock images themselves
-        if (!img.src.includes('mockup images')) {
-          img.addEventListener('click', () => {
-            let mockImage = img.getAttribute('data-mock') || '30 portfolio/mockup images/mock 5.jpg';
-            const artworkTitle = img.alt || '';
-            if (artworkTitle.includes('Solar Bloom')) {
-              mockImage = '30 portfolio/mockup images/Solar Bloom 2.jpg';
-            }
-            openLightbox(img.src, img.alt, mockImage);
-          });
-        }
+        img.addEventListener('click', () => {
+          const artworkImage = img.getAttribute('data-art') || img.src;
+          const mockImage = img.getAttribute('data-mock') || '30 portfolio/mockup images/mock 5.jpg';
+          openLightbox(artworkImage, img.alt, mockImage);
+        });
       });
 
       closeBtn.addEventListener('click', closeLightbox);

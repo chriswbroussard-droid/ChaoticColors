@@ -111,7 +111,7 @@
         </article>
 
         <!-- 8 Selected Slots -->
-        <div id="gallery" class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div id="gallery" class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <!-- Slot 1 -->
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
@@ -400,10 +400,25 @@
         lightboxMock.alt = '';
       }
 
+      function addCacheBuster(path) {
+        const separator = path.includes('?') ? '&' : '?';
+        return `${path}${separator}v=${new Date().getTime()}`;
+      }
+
+      document.querySelectorAll('img.lightbox[data-mock]').forEach(img => {
+        const originalArtSrc = img.getAttribute('src');
+        const mockSrc = img.getAttribute('data-mock');
+        if (!originalArtSrc || !mockSrc) return;
+
+        img.setAttribute('data-art', originalArtSrc);
+        img.setAttribute('src', addCacheBuster(encodeURI(mockSrc)));
+      });
+
       document.querySelectorAll('img.lightbox').forEach(img => {
         img.addEventListener('click', () => {
+          const artworkImage = img.getAttribute('data-art') || img.src;
           const mockImage = img.getAttribute('data-mock') || '';
-          openLightbox(img.src, img.alt, mockImage);
+          openLightbox(artworkImage, img.alt, mockImage);
         });
       });
 
