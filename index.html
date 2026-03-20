@@ -16,6 +16,41 @@
         letter-spacing: 0.01em;
         line-height: 1.1;
       }
+
+      .quote-script {
+        font-family: "Dancing Script", cursive;
+        font-size: 1.2rem;
+        line-height: 1.3;
+      }
+
+      #gallery figure figcaption {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+          "title size"
+          "statement statement";
+        column-gap: 0.75rem;
+        row-gap: 0.35rem;
+      }
+
+      #gallery figure figcaption > h4 {
+        grid-area: title;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      #gallery figure figcaption > p.text-sm {
+        grid-area: size;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      #gallery figure figcaption > p.text-xs {
+        grid-area: statement;
+        margin-top: 0.2rem;
+      }
     </style>
 
     <meta
@@ -76,22 +111,16 @@
       <section id="about" class="mx-auto max-w-6xl border-t border-white/10 px-4 py-12 sm:px-6">
         <div class="mx-auto max-w-4xl">
           <h2 class="artist-statement-title text-center text-4xl text-white sm:text-5xl">Artist Statement</h2>
-          <div class="mt-8 space-y-8 text-center">
-            <div>
-              <h3 class="text-sm font-bold uppercase tracking-widest text-white/40">The Process</h3>
-              <p class="mt-4 text-sm leading-6 text-white/70">
-                The work within the ChaoticColorsCollection is an exploration of fluid dynamics and chemical interaction. By manipulating pigments through controlled liquid reactions, the artist captures the precise moment where physics meets aesthetic form. Each piece is a documentation of energy-ranging from the microscopic behavior of cells to the macroscopic explosions of distant nebulae.
-              </p>
-            </div>
-            <div>
-              <h3 class="text-sm font-bold uppercase tracking-widest text-white/40">The Philosophy</h3>
-              <p class="mt-4 text-sm leading-6 text-white/70 italic">
-                "Art should be an invitation to wonder."
-              </p>
-              <p class="mt-4 text-sm leading-6 text-white/70">
-                By removing the traditional brushstroke, the artist allows the materials to "self-organize," resulting in organic patterns that feel both alien and deeply familiar. The goal is to provide the viewer with a focal point of vibrant energy that transforms the atmosphere of any space it inhabits.
-              </p>
-            </div>
+          <div class="mt-8 space-y-4 text-center">
+            <p class="text-sm leading-6 text-white/70">
+              Art has been my shadow since I could walk, but it found its most potent expression through the study of Kinetic Arrest. My work is an orchestration of collisions between molecular chemistry and creative intuition. By manipulating surface tension and fluid dynamics, I capture movement suspended in time, resulting in patterns that mimic the complex vibrations found in nature.
+            </p>
+            <p class="text-sm leading-6 text-white/70">
+              I do not paint static images; I facilitate environments where pigments can interact, compete, and eventually find equilibrium. My deep-rooted mastery of color theory allows me to predict these interactions while leaving enough room for the organic "chaos" that defines my style. Each series represents a rigorous exploration of theme and methodology, bridging the gap between scientific precision and abstract emotion.
+            </p>
+            <p class="quote-script text-white/70">
+              "Art should be an invitation to wonder."
+            </p>
           </div>
         </div>
       </section>
@@ -106,13 +135,13 @@
 
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/30 portfolio/Botanical Burst/Vivid_Pedals.jpg?v=20260317d" alt="Vivid Pedals - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer transition duration-300 ease-out hover:scale-125" data-mock="images/30 portfolio/mockup images/Vivid_Pedals_2.jpg?v=20260317c" loading="lazy" />
+              <img src="images/30 portfolio/Botanical Burst/Vivid_Pedals.jpg?v=20260317d" alt="Vivid Pedals - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer transition duration-300 ease-out hover:scale-125" data-mock="images/30 portfolio/mockup images/Vivid_Pedals_3.JPG" loading="lazy" />
             </div>
           </figure>
 
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/30 portfolio/Botanical Burst/Floral_Kinetic.jpg" alt="Floral Kinetic - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer transition duration-300 ease-out hover:scale-125" data-mock="images/30 portfolio/mockup images/Floral Kinetic 3.jpg" loading="lazy" />
+              <img src="images/30 portfolio/Botanical Burst/Floral_Kinetic.jpg" alt="Floral Kinetic - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer transition duration-300 ease-out hover:scale-125" data-mock="images/30 portfolio/mockup images/Floral_Kinetic_3.JPG" loading="lazy" />
             </div>
           </figure>
         </div>
@@ -176,7 +205,7 @@
 
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/30 portfolio/Botanical Burst/Floral_Kinetic.jpg?v=20260217a" alt="Floral Kinetic - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Floral Kinetic 3.jpg" loading="lazy" />
+              <img src="images/30 portfolio/Botanical Burst/Floral_Kinetic.jpg?v=20260217a" alt="Floral Kinetic - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Floral_Kinetic_3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-4">
               <h4 class="text-sm font-semibold text-white">Floral Kinetic</h4>
@@ -209,7 +238,7 @@
 
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/30 portfolio/Botanical Burst/Solar Bloom.jpg?v=20260217a" alt="Solar Bloom - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Solar_Bloom.jpg" loading="lazy" />
+              <img src="images/30 portfolio/Botanical Burst/Solar Bloom.jpg?v=20260217a" alt="Solar Bloom - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Solar_bloom  3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-4">
               <h4 class="text-sm font-semibold text-white">Solar Bloom</h4>
@@ -231,7 +260,7 @@
 
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/Twilight Tides.jpg?v=20260217a" alt="Twilight Tides - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Twilight tides 2.jpg" loading="lazy" />
+              <img src="images/Twilight Tides.jpg?v=20260217a" alt="Twilight Tides - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Twilight tides3JPG.JPG" loading="lazy" />
             </div>
             <figcaption class="p-4">
               <h4 class="text-sm font-semibold text-white">Twilight Tides</h4>
@@ -276,7 +305,7 @@
 
       <section id="contact" class="border-t border-white/10 bg-black">
         <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
-          <div class="grid gap-10 lg:grid-cols-2 lg:items-start">
+          <div class="grid gap-8 lg:items-start">
             <div class="max-w-xl">
               <h2 class="text-xl font-semibold tracking-tight text-white sm:text-2xl">Contact</h2>
               <p class="mt-2 text-xs italic leading-6 text-white/60">
@@ -288,7 +317,7 @@
               >
                 ChaoticColorDesigns@gmail.com
               </a>
-              <div class="mt-8 space-y-4">
+              <div class="mt-4 space-y-3">
                 <div class="flex items-center gap-3 sm:gap-4">
                   <img
                     src="images/30%20portfolio/head%20shot.jpg"
@@ -307,75 +336,10 @@
                   </div>
                 </div>
                 <p class="text-sm leading-6 text-white/70">
-                  Art has been my shadow since I could walk, but it took a detour through 35 years of being a haircolor specialist to find its true form. Based in Austin, TX, I'm an experimentalist at heart who swapped hair dye for high-flow acrylics.
-                </p>
-                <p class="text-sm leading-6 text-white/70">
-                  I use my deep-rooted knowledge of color theory to orchestrate collisions between chemistry and creativity. The result? Macro-organic patterns that celebrate the beauty of the unpredictable. I don't paint static images; I capture movement suspended in time.
-                </p>
-                <p class="text-sm leading-6 text-white/70">
-                  Working with professional-grade acrylics and innovative pouring techniques, Chris creates vibrant, one-of-a-kind artworks that capture movement and emotion in abstract form. Each series represents a unique exploration of theme, palette, and methodology.
+                  Chris Broussard is an Austin-based experimental artist and a master of color chemistry. With a career spanning 35 years as a premier hair color specialist and a certified instructor in the Law of Color, Chris has spent decades mastering the precise interactions of pigments and light. In 2024, Chris transitioned from the structured application of salon chemistry to the volatile, high-stakes world of fluid acrylics. This shift allowed for a deeper exploration of Macro-Organic Abstraction, utilizing professional-grade high-flow acrylics to create one-of-a-kind works that celebrate the beauty of unpredictable chemical reactions. As the founder of Chaotic Color Designs, Chris continues to push the boundaries of traditional color theory, transforming decades of technical expertise into vibrant, kinetic art.
                 </p>
               </div>
             </div>
-
-            <form
-              id="contactForm"
-              action="https://formspree.io/f/xzdarnal"
-              method="post"
-              class="rounded-2xl border border-white/10 bg-white/5 p-6"
-              aria-label="Contact form"
-            >
-              <div class="grid gap-4">
-                <input
-                  type="text"
-                  placeholder="Name"
-                  name="name"
-                  required
-                  class="w-full rounded-xl border border-white/10 bg-black px-3 py-2 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  name="email"
-                  required
-                  class="w-full rounded-xl border border-white/10 bg-black px-3 py-2 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
-                />
-                <textarea
-                  rows="5"
-                  placeholder="Message"
-                  name="message"
-                  required
-                  class="w-full rounded-xl border border-white/10 bg-black px-3 py-2 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
-                ></textarea>
-
-                <button
-                  type="submit"
-                  class="w-full rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-black hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-                >
-                  Send Message
-                </button>
-                <p class="mt-3 text-xs leading-5 text-white/60">
-                  Original works will be secured and sold to collectors upon request. Because of the volatile nature of the fluid process, these specific movements, color bleeds, and textures can never be replicated. When you collect a piece of ChaoticColorsDesigns, you are an elite guardian of that specific moment in time.
-                </p>
-                <div class="mt-4 space-y-2 border-t border-white/20 pt-3">
-                  <p class="text-xs text-white/50">
-                    <strong>1. Delivery Timeline:</strong> Orders typically ship within 3-5 business days. Delivery takes 14-21 business days within the United States via insured shipping.
-                  </p>
-                  <p class="text-xs text-white/50">
-                    <strong>2. International Shipping:</strong> Customers are responsible for all customs duties, import taxes, and local handling fees. We ship internationally with tracking at your request.
-                  </p>
-                  <p class="text-xs text-white/50">
-                    <strong>3. Packaging and Handling:</strong> Original artwork is carefully packaged in museum-quality materials and shipped with full insurance and tracking.
-                  </p>
-                  <p class="text-xs text-white/50">
-                    <strong>4. Quality Guarantee:</strong> Damage during shipment is covered by our shipping insurance. Contact us immediately if your piece arrives damaged.
-                  </p>
-                  <p class="text-xs text-white/50">
-                    <strong>5. Return and Exchange Policy:</strong> Due to the hand-signed limited edition nature of these original works, all sales are final. No returns or exchanges are accepted.
-                  </p>
-                </div>
-              </div>
-            </form>
           </div>
         </div>
       </section>
@@ -408,76 +372,6 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
-      const squareBuyLinks = {
-        'kinetic flow': 'https://square.link/u/Uguj9mac',
-        'magma monsoon': 'https://square.link/u/gh4g6kxd',
-        "frost's heart": 'https://square.link/u/qNQMr2JF',
-        'frosts heart': 'https://square.link/u/qNQMr2JF',
-        "cinder's river": 'https://square.link/u/YzLpR83V',
-        'cinders river': 'https://square.link/u/YzLpR83V',
-        'verdant veil': 'https://square.link/u/wLRSq970',
-        'floral kinetic': 'https://square.link/u/UCvfqPJ6',
-        'cerulean swirl': 'https://square.link/u/AyrOrAK9',
-        'solar bloom': 'https://square.link/u/AyrOrAK9',
-        'abyssal dawn': 'https://square.link/u/JASryG7g',
-        'abyssal  dawn': 'https://square.link/u/JASryG7g',
-        'twilight tides': 'https://square.link/u/qCrjY7wh',
-        'gilded moss': 'https://square.link/u/JJWQkaqq',
-        'guilded moss': 'https://square.link/u/JJWQkaqq',
-        'bloomquake': 'https://square.link/u/7V4CY9pq',
-        'bloomquake .': 'https://square.link/u/7V4CY9pq',
-        'vivid pedals': 'https://square.link/u/ckb9SUQS',
-        'verdent tides ascending': 'https://square.link/u/4adeL1PK',
-        'verdant tides ascending': 'https://square.link/u/4adeL1PK',
-        'embers in the undertow': 'https://square.link/u/Dcqvs7nm',
-        'luminous lagoon': 'https://square.link/u/OEaEHyuh',
-        'luminous lagoon .': 'https://square.link/u/OEaEHyuh',
-        'celestial current': 'https://square.link/u/lHUyPXNt',
-        'solar echos': 'https://square.link/u/4oPASJlO',
-        'sunlit stillness with dragon fruit': 'https://square.link/u/9hZ3Ohux',
-        'sunlit stillness': 'https://square.link/u/9hZ3Ohux',
-        'sunit stillness with dragon fruit': 'https://square.link/u/9hZ3Ohux',
-        'sunit stillness': 'https://square.link/u/9hZ3Ohux',
-        'amethyst abyss': 'https://square.link/u/7WeF0llL',
-        'terracotta tides': 'https://square.link/u/MZrqapw6',
-        'terracotta tide': 'https://square.link/u/MZrqapw6',
-        "leviathan's armor": 'https://square.link/u/faM3DjOJ',
-        'leviathans armor': 'https://square.link/u/faM3DjOJ',
-        'laviathans armor': 'https://square.link/u/faM3DjOJ',
-        'crimson current': 'https://square.link/u/7EYQ7flT',
-        'azure ember': 'https://square.link/u/O8OrfonY',
-        'bismuth bloom': 'https://square.link/u/66aa8T9f',
-        'indigo marrow': 'https://square.link/u/YotuLopu',
-        'magenta monsoon': 'https://square.link/u/ZbwomOFA',
-        'desert veins': 'https://square.link/u/oy75wwze'
-      };
-
-      function getSquareLinkForTitle(title) {
-        return squareBuyLinks[(title || '').trim().toLowerCase()] || '';
-      }
-
-      function addBuyButtons() {
-        document.querySelectorAll('img.lightbox').forEach((img) => {
-          const figure = img.closest('figure');
-          const figcaption = figure ? figure.querySelector('figcaption') : null;
-          if (!figcaption || figcaption.querySelector('.buy-art-btn')) return;
-
-          const titleEl = figcaption.querySelector('h3, h4');
-          const artworkTitle = titleEl ? titleEl.textContent.trim() : '';
-          const pieceSquareLink = getSquareLinkForTitle(artworkTitle);
-          if (!pieceSquareLink) return;
-
-          const buyButton = document.createElement('a');
-          buyButton.href = pieceSquareLink;
-          buyButton.target = '_blank';
-          buyButton.rel = 'noopener noreferrer';
-          buyButton.className = 'buy-art-btn mt-3 inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-white/20';
-          buyButton.textContent = 'Purchase';
-          figcaption.appendChild(buyButton);
-        });
-      }
-
-      addBuyButtons();
 
       document.querySelectorAll("[data-scroll]").forEach((btn) => {
         btn.addEventListener("click", () => {

@@ -1,12 +1,68 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery - Chris Broussard Pour Paintings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
 
     <!-- Tailwind (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .signature-piece-label {
+        font-family: "Dancing Script", cursive;
+        text-align: center;
+        font-size: 1.15rem;
+        letter-spacing: 0.01em;
+      }
+
+      main article.overflow-hidden,
+      main figure.overflow-hidden {
+        position: relative;
+      }
+
+      .art-title-overlay {
+        position: static;
+        display: block;
+        width: fit-content;
+        margin: 0;
+        max-width: 70%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 9999px;
+        background: rgba(0, 0, 0, 0.55);
+        padding: 0.2rem 0.7rem;
+        text-align: left;
+      }
+
+      main article .flex.items-start.justify-between,
+      main figure .flex.items-start.justify-between {
+        flex-wrap: wrap;
+        gap: 0.4rem 0.75rem;
+      }
+
+      main article .flex.items-start.justify-between > div,
+      main figure .flex.items-start.justify-between > div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+      }
+
+      main article .flex.items-start.justify-between > p,
+      main figure .flex.items-start.justify-between > p {
+        width: 100%;
+        max-width: none;
+        margin-top: 0.1rem;
+        text-align: left;
+      }
+    </style>
 
     <meta
       name="description"
@@ -64,15 +120,15 @@
       <!-- Featured Signature Piece -->
       <section class="mx-auto max-w-6xl px-4 pb-8 sm:px-6">
         <article class="mt-2 overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+          <div class="signature-piece-label px-5 pt-1 pb-1 text-white/70 sm:px-6">SIGNATURE PIECE</div>
           <div class="grid gap-0 lg:grid-cols-2">
             <div class="aspect-[4/3] w-full bg-white/5 lg:aspect-auto lg:min-h-[240px]">
               <img src="Signature.jpg" alt="Crimson Current - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="30 portfolio/mockup images/crimson current 2.jpg" style="transform: scale(0.85);" loading="lazy" />
             </div>
 
             <div class="p-5 sm:p-6">
-              <div class="text-xs font-semibold tracking-wide text-white/50">SIGNATURE PIECE</div>
-              <h3 class="mt-2 text-xl font-semibold tracking-tight text-white">Crimson Current (Signature)</h3>
-              <p class="mt-2 text-sm text-white/70">22" •28" • Acrylic pour on canvas • No resin finish</p>
+              <h3 class="art-title-overlay text-xl font-semibold tracking-tight text-white">Crimson Current (Signature)</h3>
+              <p class="mt-2 text-sm text-white/70">22" �28" � Acrylic pour on canvas � No resin finish</p>
 
               <p class="mt-4 text-sm leading-6 text-white/60">A river of wine-red pigment moved with visceral intensity, staining the channel with deep, inner fire.</p>
             </div>
@@ -100,7 +156,7 @@
               <img src="../../30 portfolio/Radiant Expansions/Vivid Pedals.jpg" alt="Nebula Heart - pour painting by Chris Broussard" class="h-full w-full object-cover lightbox cursor-pointer" loading="lazy" />
             </div>
             <figcaption class="p-3">
-              <h3 class="text-sm font-semibold text-white">Nebula Heart</h3>
+              <h3 class="art-title-overlay text-sm font-semibold text-white">Nebula Heart</h3>
               <p class="mt-2 text-xs text-white/60">A luminous, layered bloom with cosmic depth and radiant highlights.</p>
             </figcaption>
           </figure>
@@ -111,7 +167,7 @@
               <img src="../../series 1/Magenta Meridian.jpg" alt="Prismatic Pulse - pour painting by Chris Broussard" class="h-full w-full object-cover lightbox cursor-pointer" loading="lazy" />
             </div>
             <figcaption class="p-3">
-              <h3 class="text-sm font-semibold text-white">Prismatic Pulse</h3>
+              <h3 class="art-title-overlay text-sm font-semibold text-white">Prismatic Pulse</h3>
               <p class="mt-2 text-xs text-white/60">Vivid magenta currents with prismatic highlights and dynamic flow.</p>
             </figcaption>
           </figure>
@@ -122,7 +178,7 @@
               <img src="Art-3.jpg" alt="Ethereal Study 03 - pour painting by Chris Broussard" class="h-full w-full object-cover lightbox cursor-pointer" loading="lazy" />
             </div>
             <figcaption class="p-3">
-              <h3 class="text-sm font-semibold text-white">Cerulean Swirl</h3>
+              <h3 class="art-title-overlay text-sm font-semibold text-white">Cerulean Swirl</h3>
               <p class="mt-2 text-xs text-white/60">A deep sea blue composition with light blue and white spiral patterns.</p>
             </figcaption>
           </figure>
@@ -133,7 +189,7 @@
               <img src="Art-4.jpg" alt="Ethereal Study 04 - pour painting by Chris Broussard" class="h-full w-full object-cover lightbox cursor-pointer" loading="lazy" />
             </div>
             <figcaption class="p-3">
-              <h3 class="text-sm font-semibold text-white">Solar Bloom</h3>
+              <h3 class="art-title-overlay text-sm font-semibold text-white">Solar Bloom</h3>
               <p class="mt-2 text-xs text-white/60">A piece where three radiant energies expands outward in an explosive bloom.</p>
             </figcaption>
           </figure>
@@ -144,7 +200,7 @@
               <img src="Art-5.jpg" alt="Ethereal Study 05 - pour painting by Chris Broussard" class="h-full w-full object-cover lightbox cursor-pointer" loading="lazy" />
             </div>
             <figcaption class="p-3">
-              <h3 class="text-sm font-semibold text-white">Glacier Melt</h3>
+              <h3 class="art-title-overlay text-sm font-semibold text-white">Glacier Melt</h3>
               <p class="mt-2 text-xs text-white/60">Flowing ribbons of translucent blue and opaque white.</p>
             </figcaption>
           </figure>
@@ -168,7 +224,7 @@
               <img src="Arctic drift.jpg" alt="Arctic Drift - pour painting by Chris Broussard" class="h-full w-full object-cover lightbox cursor-pointer" loading="lazy" />
             </div>
             <figcaption class="p-3">
-              <h3 class="text-sm font-semibold text-white">Arctic Drift</h3>
+              <h3 class="art-title-overlay text-sm font-semibold text-white">Arctic Drift</h3>
               <p class="mt-2 text-xs text-white/60">A minimalistic white and gray fluid piece with subtle hints of icy blue.</p>
             </figcaption>
           </figure>
@@ -178,7 +234,7 @@
               <img src="Solar Bruise.jpg" alt="Solar Bruise - pour painting by Chris Broussard" class="h-full w-full object-cover lightbox cursor-pointer" loading="lazy" />
             </div>
             <figcaption class="p-3">
-              <h3 class="text-sm font-semibold text-white">Solar Bruise</h3>
+              <h3 class="art-title-overlay text-sm font-semibold text-white">Solar Bruise</h3>
               <p class="mt-2 text-xs text-white/60">Dynamic abstract painting capturing the vibrant energy of light reflecting on water, with gold, yellow, green, and deep blue textural brushstrokes evoking ripples of a sunlit pond.</p>
             </figcaption>
           </figure>
@@ -188,7 +244,7 @@
               <img src="../../30 portfolio/Aqueous Vibrations/Embers in the Undertow.jpg" alt="Embers in the Undertow - pour painting by Chris Broussard" class="h-full w-full object-cover lightbox cursor-pointer" loading="lazy" />
             </div>
             <figcaption class="p-3">
-              <h3 class="text-sm font-semibold text-white">Embers in the Undertow</h3>
+              <h3 class="art-title-overlay text-sm font-semibold text-white">Embers in the Undertow</h3>
             </figcaption>
           </figure>
 
@@ -197,7 +253,7 @@
               <img src="../../series 2/MELTED GLACIER.JPG" alt="Frozen Sentinel - pour painting by Chris Broussard" class="h-full w-full object-cover lightbox cursor-pointer" loading="lazy" />
             </div>
             <figcaption class="p-3">
-              <h3 class="text-sm font-semibold text-white">Frozen Sentinel</h3>
+              <h3 class="art-title-overlay text-sm font-semibold text-white">Frozen Sentinel</h3>
             </figcaption>
           </figure>
 
@@ -206,7 +262,7 @@
               <span class="text-xs text-white/50">Image Slot 05</span>
             </div>
             <figcaption class="p-3">
-              <h3 class="text-sm font-semibold text-white">Terrain Flow 05</h3>
+              <h3 class="art-title-overlay text-sm font-semibold text-white">Terrain Flow 05</h3>
             </figcaption>
           </figure>
         </div>
@@ -229,7 +285,7 @@
               <span class="text-xs text-white/50">Image Slot 01</span>
             </div>
             <figcaption class="p-3">
-              <h3 class="text-sm font-semibold text-white">Microstructure 01</h3>
+              <h3 class="art-title-overlay text-sm font-semibold text-white">Microstructure 01</h3>
             </figcaption>
           </figure>
 
@@ -238,7 +294,7 @@
               <span class="text-xs text-white/50">Image Slot 02</span>
             </div>
             <figcaption class="p-3">
-              <h3 class="text-sm font-semibold text-white">Microstructure 02</h3>
+              <h3 class="art-title-overlay text-sm font-semibold text-white">Microstructure 02</h3>
             </figcaption>
           </figure>
 
@@ -247,7 +303,7 @@
               <span class="text-xs text-white/50">Image Slot 03</span>
             </div>
             <figcaption class="p-3">
-              <h3 class="text-sm font-semibold text-white">Microstructure 03</h3>
+              <h3 class="art-title-overlay text-sm font-semibold text-white">Microstructure 03</h3>
             </figcaption>
           </figure>
 
@@ -256,7 +312,7 @@
               <span class="text-xs text-white/50">Image Slot 04</span>
             </div>
             <figcaption class="p-3">
-              <h3 class="text-sm font-semibold text-white">Microstructure 04</h3>
+              <h3 class="art-title-overlay text-sm font-semibold text-white">Microstructure 04</h3>
             </figcaption>
           </figure>
 
@@ -265,7 +321,7 @@
               <span class="text-xs text-white/50">Image Slot 05</span>
             </div>
             <figcaption class="p-3">
-              <h3 class="text-sm font-semibold text-white">Microstructure 05</h3>
+              <h3 class="art-title-overlay text-sm font-semibold text-white">Microstructure 05</h3>
             </figcaption>
           </figure>
         </div>
@@ -317,7 +373,7 @@
     </main>
 
     <footer class="border-t border-white/10 py-6 text-center text-xs text-white/40">
-      © <span id="year"></span> Chris Broussard. All rights reserved.
+      � <span id="year"></span> Chris Broussard. All rights reserved.
     </footer>
 
     <!-- Lightbox modal -->
@@ -328,99 +384,6 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
-      const squareBuyLinks = {
-        'kinetic flow': 'https://square.link/u/Uguj9mac',
-        'magma monsoon': 'https://square.link/u/gh4g6kxd',
-        "frost's heart": 'https://square.link/u/qNQMr2JF',
-        'frosts heart': 'https://square.link/u/qNQMr2JF',
-        "cinder's river": 'https://square.link/u/YzLpR83V',
-        'cinders river': 'https://square.link/u/YzLpR83V',
-        'verdant veil': 'https://square.link/u/wLRSq970',
-        'floral kinetic': 'https://square.link/u/UCvfqPJ6',
-        'cerulean swirl': 'https://square.link/u/AyrOrAK9',
-        'solar bloom': 'https://square.link/u/AyrOrAK9',
-        'abyssal dawn': 'https://square.link/u/JASryG7g',
-        'abyssal  dawn': 'https://square.link/u/JASryG7g',
-        'twilight tides': 'https://square.link/u/qCrjY7wh',
-        'gilded moss': 'https://square.link/u/JJWQkaqq',
-        'guilded moss': 'https://square.link/u/JJWQkaqq',
-        'bloomquake': 'https://square.link/u/7V4CY9pq',
-        'bloomquake .': 'https://square.link/u/7V4CY9pq',
-        'vivid pedals': 'https://square.link/u/ckb9SUQS',
-        'verdent tides ascending': 'https://square.link/u/4adeL1PK',
-        'verdant tides ascending': 'https://square.link/u/4adeL1PK',
-        'embers in the undertow': 'https://square.link/u/Dcqvs7nm',
-        'luminous lagoon': 'https://square.link/u/OEaEHyuh',
-        'luminous lagoon .': 'https://square.link/u/OEaEHyuh',
-        'celestial current': 'https://square.link/u/lHUyPXNt',
-        'solar echos': 'https://square.link/u/4oPASJlO',
-        'sunlit stillness with dragon fruit': 'https://square.link/u/9hZ3Ohux',
-        'sunlit stillness': 'https://square.link/u/9hZ3Ohux',
-        'sunit stillness with dragon fruit': 'https://square.link/u/9hZ3Ohux',
-        'sunit stillness': 'https://square.link/u/9hZ3Ohux',
-        'amethyst abyss': 'https://square.link/u/7WeF0llL',
-        'terracotta tides': 'https://square.link/u/MZrqapw6',
-        'terracotta tide': 'https://square.link/u/MZrqapw6',
-        "leviathan's armor": 'https://square.link/u/faM3DjOJ',
-        'leviathans armor': 'https://square.link/u/faM3DjOJ',
-        'laviathans armor': 'https://square.link/u/faM3DjOJ',
-        'crimson current': 'https://square.link/u/7EYQ7flT',
-        'azure ember': 'https://square.link/u/O8OrfonY',
-        'bismuth bloom': 'https://square.link/u/66aa8T9f',
-        'indigo marrow': 'https://square.link/u/YotuLopu',
-        'magenta monsoon': 'https://square.link/u/ZbwomOFA',
-        'desert veins': 'https://square.link/u/oy75wwze'
-      };
-
-      function normalizeArtworkTitle(title) {
-        return (title || '')
-          .toLowerCase()
-          .replace(/[’]/g, "'")
-          .replace(/\([^)]*\)/g, ' ')
-          .replace(/\s*-\s*(acrylic|pour)\s+painting.*$/, '')
-          .replace(/[^a-z0-9'\s]/g, ' ')
-          .replace(/\s+/g, ' ')
-          .trim();
-      }
-
-      const normalizedSquareBuyLinks = Object.fromEntries(
-        Object.entries(squareBuyLinks).map(([title, link]) => [normalizeArtworkTitle(title), link])
-      );
-
-      function getSquareLinkForTitle(title) {
-        const normalizedTitle = normalizeArtworkTitle(title);
-        return normalizedSquareBuyLinks[normalizedTitle] || '';
-      }
-
-      function addBuyButtons() {
-        document.querySelectorAll('img.lightbox').forEach((img) => {
-          const figure = img.closest('figure');
-          const figcaption = figure ? figure.querySelector('figcaption') : null;
-          if (!figcaption || figcaption.querySelector('.buy-art-btn')) return;
-
-          const titleEl = figcaption.querySelector('h3, h4');
-          const altTitle = ((img.getAttribute('alt') || '').split(' - ')[0] || '').trim();
-          const artworkTitle = titleEl ? titleEl.textContent.trim() : altTitle;
-          const pieceSquareLink = getSquareLinkForTitle(artworkTitle);
-          if (!pieceSquareLink) return;
-
-          const buyButton = document.createElement('a');
-          buyButton.href = pieceSquareLink;
-          buyButton.target = '_blank';
-          buyButton.rel = 'noopener noreferrer';
-          buyButton.className = 'buy-art-btn mt-3 inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-white/20';
-          buyButton.textContent = 'Purchase';
-          figcaption.appendChild(buyButton);
-        });
-      }
-
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', addBuyButtons);
-      } else {
-        addBuyButtons();
-      }
-      setTimeout(addBuyButtons, 0);
-
       document.getElementById("contactForm").addEventListener("submit", (e) => {
         e.preventDefault();
         alert("Mockup form submitted. Connect to backend when ready.");
@@ -453,3 +416,4 @@
     </script>
   </body>
 </html>
+
