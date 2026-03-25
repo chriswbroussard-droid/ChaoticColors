@@ -7,23 +7,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
-
     <script src="https://cdn.tailwindcss.com"></script>
-
     <style>
       .artist-statement-title {
         font-family: "Dancing Script", cursive;
         letter-spacing: 0.01em;
         line-height: 1.1;
       }
-
-      .quote-script {
+     .quote-script {
         font-family: "Dancing Script", cursive;
         font-size: 1.2rem;
         line-height: 1.3;
       }
-
-      #gallery figure figcaption {
+     #gallery figure figcaption {
         display: grid;
         grid-template-columns: 1fr auto;
         grid-template-areas:
@@ -32,13 +28,11 @@
         column-gap: 0.75rem;
         row-gap: 0.35rem;
       }
-
-      #gallery figure figcaption > h4 {
+     #gallery figure figcaption > h4 {
         grid-area: title;
         margin-top: 0;
         margin-bottom: 0;
       }
-
       #gallery figure figcaption > p.text-sm {
         grid-area: size;
         margin-top: 0;
@@ -46,19 +40,16 @@
         text-align: right;
         white-space: nowrap;
       }
-
       #gallery figure figcaption > p.text-xs {
         grid-area: statement;
         margin-top: 0.2rem;
       }
     </style>
-
     <meta
       name="description"
       content="Chris Broussard is a local Austin, Texas artist specializing in professional, high-quality Acrylic paintings. View selected works and contact for availability."
     />
   </head>
-
   <body class="min-h-screen bg-black text-white antialiased">
     <header class="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur">
       <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
@@ -66,7 +57,6 @@
           <span class="text-sm font-semibold tracking-tight text-white sm:text-base">Chris Broussard</span>
           <span class="text-xs font-medium tracking-wide text-white/60 sm:text-sm">Acrylic Paintings • Austin, TX</span>
         </a>
-
         <nav class="flex items-center gap-5" aria-label="Primary">
           <a
             href="#about-artist"
@@ -95,7 +85,6 @@
         </nav>
       </div>
     </header>
-
     <main id="top">
       <section class="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
         <div class="mx-auto max-w-2xl text-center">
@@ -108,7 +97,6 @@
           </p>
         </div>
       </section>
-
       <section class="mx-auto max-w-6xl px-4 pb-8 sm:px-6">
         <div class="mx-auto max-w-2xl">
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
@@ -118,7 +106,6 @@
           </figure>
         </div>
       </section>
-
       <section id="about" class="mx-auto max-w-6xl border-t border-white/10 px-4 py-12 sm:px-6">
         <div class="mx-auto max-w-4xl">
           <h2 class="artist-statement-title text-center text-4xl text-white sm:text-5xl">Artist Statement</h2>
@@ -135,7 +122,6 @@
           </div>
         </div>
       </section>
-
       <section id="work" class="mx-auto max-w-6xl px-4 pb-12 sm:px-6 sm:pb-16 border-t border-white/10 pt-12">
         <div class="text-center">
           <h2 class="artist-statement-title text-3xl text-white sm:text-4xl">Selected Works</h2>
@@ -146,110 +132,143 @@
               Click on the image to see the corresponding art in detail.
           </p>
         </div>
-
         <div id="gallery" class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
               <img src="images/Kinetic_Flow.jpg" alt="Kinetic Flow - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Kinetic_Flow_3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-4">
-              <h4 class="text-sm font-semibold text-white">Kinetic Flow</h4>
-              <p class="mt-1 text-sm text-white/60">20"x20"</p>
+              <div class="flex items-center gap-2">
+                <h4 class="text-sm font-semibold text-white mb-0">Kinetic Flow</h4>
+                <span class="text-sm text-white/60">20"x20"</span>
+              </div>
               <p class="mt-2 text-xs text-white/60">Cells wheel like constellations, carried on a slow tide of light.</p>
+              <div class="mt-2">
+                <a href="https://square.link/u/Uguj9mac" target="_blank" class="inline-block rounded bg-black px-2 py-1 text-xs font-semibold text-white border border-white hover:bg-white hover:text-black transition">Buy</a>
+              </div>
             </figcaption>
           </figure>
-
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
               <img src="images/30 portfolio/Chromatic Flux/Bismuth_Bloom.jpg" alt="Bismuth Bloom - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Bismuth Bloom 3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-4">
-              <div class="flex items-center justify-between">
-                <h4 class="text-sm font-semibold text-white">Bismuth Bloom</h4>
-                <span class="text-white/60 font-normal ml-2">20&quot;x20&quot;</span>
+              <div class="flex items-center gap-2">
+                <h4 class="text-sm font-semibold text-white mb-0">Bismuth Bloom</h4>
+                <span class="text-sm text-white/60">20"x20"</span>
               </div>
               <p class="mt-2 text-xs text-white/60">Metallic petals crystallize into luminous cells, balancing structure with motion.</p>
+              <div class="mt-2">
+                <a href="https://square.link/u/66aa8T9f" target="_blank" class="inline-block rounded bg-black px-2 py-1 text-xs font-semibold text-white border border-white hover:bg-white hover:text-black transition">Buy</a>
+              </div>
             </figcaption>
           </figure>
-
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
               <img src="images/30 portfolio/Chromatic Flux/Magenta Monsoon.JPG?v=20260318a" alt="Magenta Monsoon - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Magenta Monsoon 3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-4">
-              <h4 class="text-sm font-semibold text-white">Magenta Monsoon</h4>
-              <p class="mt-1 text-sm text-white/60">16"x24"</p>
+              <div class="flex items-center gap-2">
+                <h4 class="text-sm font-semibold text-white mb-0">Magenta Monsoon</h4>
+                <span class="text-sm text-white/60">16"x24"</span>
+              </div>
               <p class="mt-2 text-xs text-white/60">Gold surges and splinters, a bright tide breaking into crystal song.</p>
+              <div class="mt-2">
+                <a href="https://square.link/u/ZbwomOFA" target="_blank" class="inline-block rounded bg-black px-2 py-1 text-xs font-semibold text-white border border-white hover:bg-white hover:text-black transition">Buy</a>
+              </div>
             </figcaption>
           </figure>
-
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
               <img src="images/30 portfolio/Botanical Burst/Floral_Kinetic.jpg?v=20260217a" alt="Floral Kinetic - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Floral_Kinetic_3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-4">
-              <h4 class="text-sm font-semibold text-white">Floral Kinetic</h4>
-              <p class="mt-1 text-sm text-white/60">16"x24"</p>
+              <div class="flex items-center gap-2">
+                <h4 class="text-sm font-semibold text-white mb-0">Floral Kinetic</h4>
+                <span class="text-sm text-white/60">16"x24"</span>
+              </div>
               <p class="mt-2 text-xs text-white/60">Petals flare and whirl, a garden held in a single breath.</p>
+              <div class="mt-2">
+                <a href="https://square.link/u/UCvfqPJ6" target="_blank" class="inline-block rounded bg-black px-2 py-1 text-xs font-semibold text-white border border-white hover:bg-white hover:text-black transition">Buy</a>
+              </div>
             </figcaption>
           </figure>
-
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
               <img src="images/30 portfolio/Chromatic Flux/Verdant Veil.JPG?v=20260217a" alt="Verdant Veil - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Vernant Veil 3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-4">
-              <h4 class="text-sm font-semibold text-white">Verdant Veil</h4>
-              <p class="mt-1 text-sm text-white/60">16"x24"</p>
+              <div class="flex items-center gap-2">
+                <h4 class="text-sm font-semibold text-white mb-0">Verdant Veil</h4>
+                <span class="text-sm text-white/60">16"x24"</span>
+              </div>
               <p class="mt-2 text-xs text-white/60">Verdant veils fold and unfurl, soft as moss after rain.</p>
+              <div class="mt-2">
+                <a href="https://square.link/u/wLRSq970" target="_blank" class="inline-block rounded bg-black px-2 py-1 text-xs font-semibold text-white border border-white hover:bg-white hover:text-black transition">Buy</a>
+              </div>
             </figcaption>
           </figure>
-
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
               <img src="images/30 portfolio/Botanical Burst/Solar Bloom.jpg?v=20260217a" alt="Solar Bloom - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Solar_bloom  3.JPG?v=20260320a" loading="lazy" />
             </div>
             <figcaption class="p-4">
-              <h4 class="text-sm font-semibold text-white">Solar Bloom</h4>
-              <p class="mt-1 text-sm text-white/60">16"x24"</p>
+              <div class="flex items-center gap-2">
+                <h4 class="text-sm font-semibold text-white mb-0">Solar Bloom</h4>
+                <span class="text-sm text-white/60">16"x24"</span>
+              </div>
               <p class="mt-2 text-xs text-white/60">Three suns open at once, spilling heat into bloom.</p>
+              <div class="mt-2">
+                <a href="https://square.link/u/pMtoRrb4" target="_blank" class="inline-block rounded bg-black px-2 py-1 text-xs font-semibold text-white border border-white hover:bg-white hover:text-black transition">Buy</a>
+              </div>
             </figcaption>
           </figure>
-
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
               <img src="images/30 portfolio/Fluid Frontier/Abyssal Dawn.jpg?v=20260217a" alt="Abyssal Dawn - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/abyssal dawn 3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-4">
-              <h4 class="text-sm font-semibold text-white">Abyssal Dawn</h4>
-              <p class="mt-1 text-sm text-white/60">16"x24"</p>
+              <div class="flex items-center gap-2">
+                <h4 class="text-sm font-semibold text-white mb-0">Abyssal Dawn</h4>
+                <span class="text-sm text-white/60">16"x24"</span>
+              </div>
               <p class="mt-2 text-xs text-white/60">Deep ocean blues meet the first light of emergence.</p>
+              <div class="mt-2">
+                <a href="https://square.link/u/JASryG7g" target="_blank" class="inline-block rounded bg-black px-2 py-1 text-xs font-semibold text-white border border-white hover:bg-white hover:text-black transition">Buy</a>
+              </div>
             </figcaption>
           </figure>
-
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
               <img src="images/30 portfolio/Botanical Burst/Gilded Moss.JPG?v=20260217a" alt="Gilded Moss - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Guilded Moss 3.JPG?v=20260320a" loading="lazy" />
             </div>
             <figcaption class="p-4">
-              <h4 class="text-sm font-semibold text-white">Gilded Moss</h4>
-              <p class="mt-1 text-sm text-white/60">16"x24"</p>
+              <div class="flex items-center gap-2">
+                <h4 class="text-sm font-semibold text-white mb-0">Gilded Moss</h4>
+                <span class="text-sm text-white/60">16"x24"</span>
+              </div>
               <p class="mt-2 text-xs text-white/60">Gold-dusted greens gather like forest light in shadow.</p>
+              <div class="mt-2">
+                <a href="https://square.link/u/JJWQkaqq" target="_blank" class="inline-block rounded bg-black px-2 py-1 text-xs font-semibold text-white border border-white hover:bg-white hover:text-black transition">Buy</a>
+              </div>
             </figcaption>
           </figure>
-
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
               <img src="images/30 portfolio/Botanical Burst/Bloomquake . - Copy.JPG" alt="Bloomquake - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Bloomquake 3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-4">
-              <h4 class="text-sm font-semibold text-white">Bloomquake</h4>
-              <p class="mt-1 text-sm text-white/60">24"x36"</p>
+              <div class="flex items-center gap-2">
+                <h4 class="text-sm font-semibold text-white mb-0">Bloomquake</h4>
+                <span class="text-sm text-white/60">24"x36"</span>
+              </div>
               <p class="mt-2 text-xs text-white/60">Bloom and tremor, a floral shockwave across the field.</p>
+              <div class="mt-2">
+                <a href="https://square.link/u/7V4CY9pq" target="_blank" class="inline-block rounded bg-black px-2 py-1 text-xs font-semibold text-white border border-white hover:bg-white hover:text-black transition">Buy</a>
+              </div>
             </figcaption>
           </figure>
         </div>
-
         <div class="mt-8 flex justify-center">
           <a
             href="gallery.html"
@@ -260,7 +279,6 @@
           </a>
         </div>
       </section>
-
       <section id="contact" class="border-t border-white/10 bg-black">
         <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div class="grid gap-10 lg:grid-cols-2 lg:items-start">
@@ -298,7 +316,6 @@
                 </p>
               </div>
             </div>
-
             <form id="contactForm" class="rounded-2xl border border-white/10 bg-white/5 p-6" aria-label="Contact form">
               <div class="grid gap-4">
                 <input
@@ -354,11 +371,9 @@
         </div>
       </section>
     </main>
-
     <footer class="border-t border-white/10 py-6 text-center text-xs text-white/40">
       © <span id="year"></span> Chris Broussard. All rights reserved.
     </footer>
-
     <div id="lightbox" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
       <button id="lightbox-close" class="absolute top-4 right-4 text-white text-2xl leading-none z-10">x</button>
       <div class="flex gap-6 items-center justify-center max-h-[90vh]">
@@ -372,17 +387,14 @@
         </div>
       </div>
     </div>
-
     <style>
       #lightbox-mock {
         border: 2px solid #ffff00 !important;
         background-color: rgba(0, 0, 0, 0.2) !important;
       }
     </style>
-
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
-
       document.querySelectorAll("[data-scroll]").forEach((btn) => {
         btn.addEventListener("click", () => {
           const sel = btn.getAttribute("data-scroll");
@@ -390,12 +402,10 @@
           if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
         });
       });
-
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = document.getElementById('lightbox-img');
       const lightboxMock = document.getElementById('lightbox-mock');
       const closeBtn = document.getElementById('lightbox-close');
-
       function openLightbox(src, alt, mockSrc) {
         lightboxImg.src = src;
         lightboxImg.alt = alt || '';
@@ -416,7 +426,6 @@
         lightboxMock.onload = () => console.log('Mockup image loaded successfully:', mockPath);
         lightbox.classList.remove('hidden');
       }
-
       function closeLightbox() {
         lightbox.classList.add('hidden');
         lightboxImg.src = '';
@@ -424,12 +433,10 @@
         lightboxMock.src = '';
         lightboxMock.alt = '';
       }
-
       function addCacheBuster(path) {
         const separator = path.includes('?') ? '&' : '?';
         return `${path}${separator}v=${new Date().getTime()}`;
       }
-
       document.querySelectorAll('img.lightbox[data-mock]').forEach(img => {
         const originalArtSrc = img.getAttribute('src');
         const mockSrc = img.getAttribute('data-mock');
@@ -438,7 +445,6 @@
         img.setAttribute('data-art', originalArtSrc);
         img.setAttribute('src', addCacheBuster(encodeURI(mockSrc)));
       });
-
       document.querySelectorAll('img.lightbox').forEach(img => {
         img.addEventListener('click', () => {
           const artworkImage = img.getAttribute('data-art') || img.src;
@@ -446,10 +452,32 @@
           openLightbox(artworkImage, img.alt, mockImage);
         });
       });
-
       closeBtn.addEventListener('click', closeLightbox);
       lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
       document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
-    </script>
+    </script><script>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('gallery_buttons.html')
+        .then(response => response.text())
+        .then(data => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, 'text/html');
+            const buttons = doc.querySelectorAll('a');
+
+            document.querySelectorAll('h3').forEach(h3 => {
+                const artName = h3.innerText.trim().toLowerCase();
+                buttons.forEach(btn => {
+                    if (btn.innerText.toLowerCase().includes(artName)) {
+                        const btnClone = btn.cloneNode(true);
+                        btnClone.innerText = 'Buy Now';
+                        btnClone.classList.add('buy-button'); 
+                        btnClone.innerText = 'Buy Now';
+                        h3.parentNode.insertBefore(btnClone, h3.nextSibling);
+                    }
+                });
+            });
+        });
+});
+</script>
   </body>
 </html>
