@@ -12,13 +12,11 @@
       .artist-statement-title {
         font-family: "Dancing Script", cursive;
         letter-spacing: 0.01em;
-        line-height: 1.1;
-      }
+        line-height: 1.1;      }
      .quote-script {
         font-family: "Dancing Script", cursive;
         font-size: 1.2rem;
-        line-height: 1.3;
-      }
+        line-height: 1.3;  }
      #gallery figure figcaption {
         display: grid;
         grid-template-columns: 1fr auto;
@@ -26,24 +24,20 @@
           "title size"
           "statement statement";
         column-gap: 0.75rem;
-        row-gap: 0.35rem;
-      }
+        row-gap: 0.35rem;    }
      #gallery figure figcaption > h4 {
         grid-area: title;
         margin-top: 0;
-        margin-bottom: 0;
-      }
+        margin-bottom: 0;      }
       #gallery figure figcaption > p.text-sm {
         grid-area: size;
         margin-top: 0;
         margin-bottom: 0;
         text-align: right;
-        white-space: nowrap;
-      }
+        white-space: nowrap;      }
       #gallery figure figcaption > p.text-xs {
         grid-area: statement;
-        margin-top: 0.2rem;
-      }
+        margin-top: 0.2rem;      }
     </style>
     <meta
       name="description"
@@ -61,7 +55,7 @@
           <a
             href="#about-artist"
             class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-          >
+                      >
             About
           </a>
           <a
@@ -135,7 +129,7 @@
         <div id="gallery" class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/Kinetic_Flow.jpg" alt="Starlight Tides - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/starlight tides 3.JPG" loading="lazy" />
+              <img src="images/30 portfolio/Cellular Synthesis/Starlight Tides.JPG" alt="Starlight Tides - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/starlight tides 3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-4">
               <div class="flex items-center gap-2">
@@ -150,7 +144,7 @@
           </figure>
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-                <img src="images/30 portfolio/Chromatic Flux/Bismuth_Bloom.jpg" alt="Metalic Flower - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/metalic flower 3.JPG" loading="lazy" />
+                <img src="images/30 portfolio/Chromatic Flux/Metalic Flower.jpg" alt="Metalic Flower - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/metalic flower 3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-4">
               <div class="flex items-center gap-2">
@@ -241,7 +235,7 @@
           </figure>
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/30 portfolio/Botanical Burst/Guilded Moss.JPG?v=20260217a" alt="Gilded Moss - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Guilded Moss 3.JPG?v=20260320a" loading="lazy" />
+              <img src="images/30 portfolio/Botanical Burst/Forest Light.JPG" alt="Forest Light - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Guilded Moss 3.JPG?v=20260320a" loading="lazy" />
             </div>
             <figcaption class="p-4">
               <div class="flex items-center gap-2">
@@ -337,18 +331,15 @@
                   required
                   class="w-full rounded-xl border border-white/10 bg-black px-3 py-2 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
                 ></textarea>
-
                 <button
                   type="submit"
                   class="w-full rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-black hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                 >
                   Send Message
                 </button>
-
                 <p class="mt-3 text-xs leading-5 text-white/60">
                   Original works will be secured and sold to collectors upon request. Because of the volatile nature of the fluid process, these specific movements, color bleeds, and textures can never be replicated. When you collect a piece of ChaoticColorsDesigns, you are an elite guardian of that specific moment in time.
                 </p>
-
                 <div class="mt-4 space-y-2 border-t border-white/20 pt-3">
                   <p class="text-xs text-white/50">
                     <strong>1. Delivery Timeline:</strong> Orders typically ship within 3-5 business days. Delivery takes 14-21 business days within the United States via insured shipping.
@@ -404,7 +395,7 @@
         });
       });
       const lightbox = document.getElementById('lightbox');
-      const lightboxImg = document.getElementById('lightbox-img');
+s      const lightboxImg = document.getElementById('lightbox-img');
       const lightboxMock = document.getElementById('lightbox-mock');
       const closeBtn = document.getElementById('lightbox-close');
       function openLightbox(src, alt, mockSrc) {
@@ -456,8 +447,7 @@
       closeBtn.addEventListener('click', closeLightbox);
       lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
       document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
-    </script><script>
-document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
     fetch('gallery_buttons.html')
         .then(response => response.text())
         .then(data => {
