@@ -566,7 +566,7 @@
             <div class="max-w-xl">
               <h2 class="text-xl font-semibold tracking-tight text-white sm:text-2xl">Contact</h2>
               <p class="mt-2 text-xs italic leading-6 text-white/60">
-                All works of art produced are a limited edition. Once the limit is reached, it will be retired. Each piece purchased will be hand signed, numbered, and receive a COA. for inquiries about availability, special request, or custom work, please contact me and lets talk. If needing a custom size, send a request and let me know.
+                <span style="font-size:1.15em;">All works of art produced are gallery quality <b>Giclée</b> print reproductions of the original using pigment- based  inks  that resist UV light and made on acid free 100% cotton-rag paper.</span> Each piece purchased will be hand signed, numbered, and receive a COA. For inquiries about availability, special request, or custom work, please contact me and let's talk. If needing a custom size, send a request and let me know.
               </p>
               <a
                 href="mailto:ChaoticColorDesigns@gmail.com"
@@ -782,51 +782,6 @@
       closeBtn.addEventListener('click', closeLightbox);
       lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
       document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
-    </script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      fetch('gallery_buttons.html')
-        .then(response => response.text())
-        .then(data => {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(data, 'text/html');
-          const buttons = doc.querySelectorAll('a');
-          document.querySelectorAll('h3').forEach(h3 => {
-            const artName = h3.innerText.trim().toLowerCase();
-            // Remove any existing buy buttons next to this h3 (cleanup static duplicates)
-            let next = h3.nextSibling;
-            while (next && next.nodeType === 1 && next.classList.contains('buy-button')) {
-              const toRemove = next;
-              next = next.nextSibling;
-              toRemove.remove();
-            }
-            // Only insert one buy button per artwork
-            let inserted = false;
-            for (const btn of buttons) {
-              if (btn.innerText.toLowerCase().includes(artName)) {
-                if (!inserted) {
-                  const btnClone = btn.cloneNode(true);
-                  btnClone.classList.add('buy-button');
-                  // Always set text to 'Buy' (remove name and price)
-                  btnClone.textContent = 'Buy';
-                  btnClone.classList.remove('text-lg', 'px-4', 'py-2.5', 'py-2', 'px-4');
-                  btnClone.classList.add('text-xs', 'px-2', 'py-1');
-                  // Place after measurement span if present
-                  const parent = h3.parentNode;
-                  const siblings = Array.from(parent.childNodes);
-                  const span = siblings.find(node => node.nodeType === 1 && node.tagName === 'SPAN');
-                  if (span) {
-                    span.insertAdjacentElement('afterend', btnClone);
-                  } else {
-                    h3.parentNode.insertBefore(btnClone, h3.nextSibling);
-                  }
-                  inserted = true;
-                }
-              }
-            }
-          });
-        });
-    });
     </script>
   </body>
 </html>
