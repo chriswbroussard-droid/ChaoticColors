@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curated for Your Space | Chaotic Color Designs</title>
+    <meta name="description" content="Explore coordinated artwork groupings by atmosphere and environment for healthcare, wellness, hospitality, workplace, and residential design projects." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .display-title { font-family: "Dancing Script", cursive; line-height: 1.05; }
+      .mood-section { scroll-margin-top: 6rem; }
+      .art-card img { transition: transform .45s ease, filter .45s ease; }
+      .art-card:hover img { transform: scale(1.035); filter: saturate(1.06); }
+      .palette-dot { width: 1rem; height: 1rem; border-radius: 9999px; box-shadow: 0 0 0 1px rgba(255,255,255,.3); }
+    </style>
+  </head>
+  <body class="min-h-screen bg-black text-white antialiased">
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-black/85 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+        <a href="index.html" class="min-w-0">
+          <span class="block text-sm font-semibold tracking-tight">Chaotic Color Designs</span>
+          <span class="block text-xs text-white/50">Chris Broussard · Austin, Texas</span>
+        </a>
+        <nav class="flex flex-wrap items-center gap-x-4 gap-y-1 whitespace-nowrap text-sm" aria-label="Primary">
+          <a href="gallery.html" class="text-white/70 hover:text-white">Collections</a>
+          <a href="colors.html" class="text-white/70 hover:text-white">By Color</a>
+          <a href="index.html#contact" class="text-white/70 hover:text-white">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="relative overflow-hidden border-b border-white/10">
+        <div class="absolute inset-0 opacity-50" style="background:radial-gradient(circle at 12% 18%,#174a78 0,transparent 32%),radial-gradient(circle at 88% 18%,#b56f50 0,transparent 28%),radial-gradient(circle at 58% 100%,#6b2b72 0,transparent 30%);"></div>
+        <div class="relative mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 sm:py-20 lg:grid-cols-[1.02fr_.98fr] lg:items-center">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[.28em] text-white/60">A portfolio built for specification</p>
+            <h1 class="display-title mt-4 text-5xl sm:text-7xl">Curated for Your Space</h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-white/75">
+              Begin with the atmosphere your project needs. These coordinated groupings help art consultants, designers, and project teams move from visual intent to a confident art direction.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#moods" class="rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black hover:bg-white/90">Explore atmospheres</a>
+              <a href="mailto:ChaoticColorDesigns@gmail.com?subject=Curated%20Art%20Proposal" class="rounded-xl border border-white/20 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10">Request a curated proposal</a>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <img src="images/30 portfolio/mockup images/Signature Crimson Current Lobby.png" alt="Crimson Current in a hotel lobby" class="h-full min-h-80 w-full rounded-2xl border border-white/10 object-cover shadow-2xl" />
+            <img src="images/30 portfolio/mockup images/Signature Amber Flow Lobby.png" alt="Amber Flow in an office lobby" class="mt-8 h-full min-h-80 w-full rounded-2xl border border-white/10 object-cover shadow-2xl" />
+          </div>
+        </div>
+      </section>
+
+      <section id="moods" class="mx-auto max-w-7xl px-4 py-10 sm:px-6">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+          <p class="text-xs font-semibold uppercase tracking-[.24em] text-white/50">Browse by atmosphere</p>
+          <nav id="mood-links" class="mt-4 flex flex-wrap gap-2" aria-label="Atmosphere categories"></nav>
+        </div>
+      </section>
+
+      <div id="mood-sections"></div>
+
+      <section class="border-y border-white/10 bg-white/[.035]">
+        <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
+          <div class="max-w-3xl">
+            <p class="text-xs font-semibold uppercase tracking-[.25em] text-white/50">Consultant-ready support</p>
+            <h2 class="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">A clearer path from concept to placement.</h2>
+            <p class="mt-4 text-base leading-7 text-white/65">Each grouping can be refined around a finish schedule, brand palette, installation area, or desired emotional tone.</p>
+          </div>
+          <div class="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="rounded-2xl border border-white/10 bg-black/40 p-5"><h3 class="font-semibold">Coordinated groupings</h3><p class="mt-2 text-sm leading-6 text-white/60">Build cohesive multi-piece installations across rooms, floors, or an entire property.</p></article>
+            <article class="rounded-2xl border border-white/10 bg-black/40 p-5"><h3 class="font-semibold">Custom sizing</h3><p class="mt-2 text-sm leading-6 text-white/60">Adapt artwork proportions and scale to the architecture and intended viewing distance.</p></article>
+            <article class="rounded-2xl border border-white/10 bg-black/40 p-5"><h3 class="font-semibold">Placement visualization</h3><p class="mt-2 text-sm leading-6 text-white/60">Review artwork in context through presentation-ready interior placement mockups.</p></article>
+            <article class="rounded-2xl border border-white/10 bg-black/40 p-5"><h3 class="font-semibold">Project collaboration</h3><p class="mt-2 text-sm leading-6 text-white/60">Discuss palette direction, reproductions, licensing, and project-specific requirements.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-5xl px-4 py-16 text-center sm:px-6 sm:py-24">
+        <p class="display-title text-4xl sm:text-6xl">Bring the right atmosphere into focus.</p>
+        <p class="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/65">Share your space, palette, and project goals to begin a coordinated art proposal.</p>
+        <a href="mailto:ChaoticColorDesigns@gmail.com?subject=Curated%20Art%20Proposal" class="mt-8 inline-flex rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-white/90">Start a project conversation</a>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 py-8 text-center text-sm text-white/45">© 2026 Chaotic Color Designs · Chris Broussard</footer>
+
+    <div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/95 p-5" role="dialog" aria-modal="true" aria-label="Artwork preview">
+      <button id="lightbox-close" class="absolute right-5 top-5 rounded-full border border-white/25 px-4 py-2 text-sm">Close</button>
+      <img id="lightbox-image" class="max-h-[88vh] max-w-[92vw] object-contain" alt="" />
+    </div>
+
+    <script>
+      const groups = [
+        {
+          id: 'calm-restorative', name: 'Calm & Restorative',
+          use: 'Healthcare · Wellness · Spa · Patient and reflection areas',
+          copy: 'Soft blues, aqua, pale green, peach, and quiet movement create a composed visual rhythm for spaces designed around comfort and ease.',
+          palette: ['#d8edf4','#84c8d8','#9fc7b8','#f1c5ad','#eeeaf2'],
+          art: [
+            ['Life After Ice','images/30 portfolio/Fluid Frontier/Life After Ice.jpg'],
+            ['Luminous Lagoon','art catalog/Luminous Lagoon 2.JPG'],
+            ['Cobalt Continuum','art catalog/Cobalt Continuum.png'],
+            ['Cerulean Swirl','art catalog/Cerulean Swirl 2.JPG'],
+            ['Glacier Sediment','art catalog/Glacier Sediment 2.JPG'],
+            ["Neptune's Turbulence",'art catalog/Neptunes Turbulance.JPG']
+          ]
+        },
+        {
+          id: 'warm-welcoming', name: 'Warm & Welcoming',
+          use: 'Reception · Senior living · Hospitality · Residential',
+          copy: 'Peach, amber, gold, and grounded earth tones bring warmth and approachability to arrival spaces and shared environments.',
+          palette: ['#f3c2a9','#db9362','#c07b3c','#efd9b8','#76594b'],
+          art: [
+            ['Sunlit Stillness','images/30 portfolio/Luminous Liquidity/sunlit Stillness with Dragon Fruit.jpg'],
+            ['Desert Veins','images/Desert Veins.JPG'],
+            ['Embers in the Undertow','art catalog/Embers in the Undertow 2.JPG'],
+            ["Frost's Heart",'images/30 portfolio/Frosts Heart.jpg']
+          ]
+        },
+        {
+          id: 'bold-energizing', name: 'Bold & Energizing',
+          use: 'Hotel lobby · Restaurant · Creative workplace · Social spaces',
+          copy: 'Saturated color and forceful movement establish an immediate focal point for projects that call for energy, confidence, and visual impact.',
+          palette: ['#d62b35','#f27024','#1457c4','#d33c92','#e9c832'],
+          art: [
+            ['Crimson Current','images/30 portfolio/Crimson Current.jpg'],
+            ['Bright Ignition','art catalog/Bright Ignition 2.JPG'],
+            ['Magma Monsoon','images/30 portfolio/Chromatic Flux/Magma Monsoon.JPG'],
+            ['Tectonic Carnival','art catalog/Tectonic Carnival.jpg']
+          ]
+        },
+        {
+          id: 'biophilic-organic', name: 'Biophilic & Organic',
+          use: 'Healthcare · Hospitality · Wellness · Nature-led interiors',
+          copy: 'Botanical gestures and biomorphic structures introduce the visual language of growth, connection, and the natural world.',
+          palette: ['#709b68','#a7c684','#d79ac3','#f0c86b','#ebe7dc'],
+          art: [
+            ['Bloomquake','images/30 portfolio/Bloomquake . -.JPG'],
+            ['Floral Kinetic','art catalog/Floral_Kinetic 2.JPG'],
+            ['Orchid Faultline','art catalog/Orchid Faultline.jpg'],
+            ['Rift in Bloom','art catalog/Rift in Bloom.jpg']
+          ]
+        },
+        {
+          id: 'refined-sophisticated', name: 'Refined & Sophisticated',
+          use: 'Executive office · Conference room · Luxury residential · Private club',
+          copy: 'Deep blues, mineral tones, restrained contrast, and elegant movement support interiors that require presence without visual noise.',
+          palette: ['#142d42','#72537f','#b89558','#dcd6cc','#2c2b2a'],
+          art: [
+            ['Nocturnal Reflection','art catalog/Nocturnal Reflection.jpg'],
+            ['Indigo Marrow','images/30 portfolio/Chromatic Flux/Indigo Marrow.JPG'],
+            ['Amethyst Abyss','art catalog/Amethyst Abyss 2.JPG'],
+            ['Cobalt Continuum','art catalog/Cobalt Continuum.png']
+          ]
+        },
+        {
+          id: 'future-forward', name: 'Future-Forward',
+          use: 'Technology · Innovation center · Modern corporate · Contemporary hospitality',
+          copy: 'Digital rhythm, prismatic color, and energized geometry give progressive environments a distinctive contemporary edge.',
+          palette: ['#0b48c8','#28a7bc','#704bc4','#ef3f8f','#f1f2f3'],
+          art: [
+            ['Prismatic Event Horizon','art catalog/Prismatic Event Horizon Edited.jpg'],
+            ['Electric Biogenesis','art catalog/Electric Biogenesis.jpg'],
+            ['Spectrum Colony','art catalog/Spectrum Colony.jpg'],
+            ['Crystals in Rebellion','images/30 portfolio/Fluid Frontier/Christals in Rebellion.JPG']
+          ]
+        }
+      ];
+
+      const links = document.querySelector('#mood-links');
+      const sections = document.querySelector('#mood-sections');
+      const lightbox = document.querySelector('#lightbox');
+      const lightboxImage = document.querySelector('#lightbox-image');
+
+      groups.forEach((group, index) => {
+        links.insertAdjacentHTML('beforeend', `<a href="#${group.id}" class="rounded-full border border-white/15 bg-black/30 px-4 py-2 text-sm text-white/70 hover:border-white/35 hover:text-white">${group.name}</a>`);
+        const artCards = group.art.map(([title, image]) => `
+          <button class="art-card overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-left hover:border-white/25" data-image="${image}" data-title="${title}">
+            <span class="block aspect-[4/3] overflow-hidden bg-black/40"><img src="${image}" alt="${title} by Chris Broussard" class="h-full w-full object-contain" loading="lazy" /></span>
+            <span class="block p-4 text-center text-sm font-semibold">${title}</span>
+          </button>`).join('');
+        const dots = group.palette.map(color => `<span class="palette-dot" style="background:${color}"></span>`).join('');
+        sections.insertAdjacentHTML('beforeend', `
+          <section id="${group.id}" class="mood-section border-t border-white/10 ${index % 2 ? 'bg-white/[.025]' : ''}">
+            <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
+              <div class="grid gap-5 lg:grid-cols-[.75fr_1.25fr] lg:items-end">
+                <div>
+                  <p class="text-xs font-semibold uppercase tracking-[.22em] text-white/45">${group.use}</p>
+                  <h2 class="display-title mt-3 text-4xl sm:text-5xl">${group.name}</h2>
+                </div>
+                <div>
+                  <p class="max-w-3xl text-base leading-7 text-white/65">${group.copy}</p>
+                  <div class="mt-4 flex items-center gap-2" aria-label="Suggested palette">${dots}</div>
+                </div>
+              </div>
+              <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">${artCards}</div>
+            </div>
+          </section>`);
+      });
+
+      document.querySelectorAll('.art-card').forEach(card => card.addEventListener('click', () => {
+        lightboxImage.src = card.dataset.image;
+        lightboxImage.alt = `${card.dataset.title} by Chris Broussard`;
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }));
+
+      const closeLightbox = () => {
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+      document.querySelector('#lightbox-close').addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', event => { if (event.target === lightbox) closeLightbox(); });
+      document.addEventListener('keydown', event => { if (event.key === 'Escape') closeLightbox(); });
+    </script>
+  </body>
+</html>

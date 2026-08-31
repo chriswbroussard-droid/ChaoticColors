@@ -9,6 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+      figcaption h3 + span,
+      figcaption h4 + span {
+        display: none;
+      }
       .artist-statement-title {
         font-family: "Dancing Script", cursive;
         letter-spacing: 0.01em;
@@ -78,10 +82,10 @@
             Explore by Color
           </a>
           <a
-            href="#art-in-spaces"
+            href="curated-spaces.html"
             class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
           >
-            Art in Spaces
+            For Designers
           </a>
           <a
             href="#contact"
@@ -108,7 +112,7 @@
         <div class="mx-auto max-w-2xl">
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/30 portfolio/Botanical Burst/Vivid_Pedals.jpg?v=20260320a" alt="Vivid Pedals - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer transition duration-300 ease-out hover:scale-125" data-mock="images/30 portfolio/mockup images/Vivid_Pedals_3.JPG?v=20260320a" loading="lazy" />
+              <img src="images/30 portfolio/mockup images/Crimson Current Hotel Lobby.png?v=20260829a" alt="Crimson Current displayed in a hotel lobby - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer transition duration-300 ease-out hover:scale-125" loading="lazy" />
             </div>
           </figure>
         </div>
@@ -136,13 +140,13 @@
             A curated selection of recent work.
           </p>
             <p class="mt-1 text-xs text-white/50">
-              Click on the image to see the corresponding art in detail.
+              Click an image to view the artwork in its placement.
           </p>
         </div>
         <div id="gallery" class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/30 portfolio/Cellular Synthesis/Starlight Tides.JPG" alt="Starlight Tides - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/starlight tides 3.JPG" loading="lazy" />
+              <img src="art catalog/Starlight Tides 2.JPG?v=20260829b" alt="Starlight Tides - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/starlight tides 3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-4">
               <div class="flex items-center gap-2">
@@ -156,11 +160,11 @@
           </figure>
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-                <img src="images/30 portfolio/Chromatic Flux/Metalic Flower.jpg" alt="Metalic Flower - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/metalic flower 3.JPG" loading="lazy" />
+                <img src="art catalog/Bright Ignition 2.JPG?v=20260829a" alt="Bright Ignition - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" loading="lazy" />
             </div>
             <figcaption class="p-4">
               <div class="flex items-center gap-2">
-                  <h4 class="text-sm font-semibold text-white mb-0">Metalic Flower</h4>
+                  <h4 class="text-sm font-semibold text-white mb-0">Bright Ignition</h4>
                 <span class="text-sm text-white/60">20"x20"</span>
               </div>
               <p class="mt-2 text-xs text-white/60">Metallic petals crystallize into luminous cells, balancing structure with motion.</p>
@@ -184,7 +188,7 @@
           </figure>
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/30 portfolio/Botanical Burst/Floral_Kinetic.jpg?v=20260217a" alt="Floral Kinetic - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Floral_Kinetic_3.JPG" loading="lazy" />
+              <img src="art catalog/Floral_Kinetic 2.JPG?v=20260829b" alt="Floral Kinetic - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Floral_Kinetic_3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-4">
               <div class="flex items-center gap-2">
@@ -323,33 +327,16 @@
           </a>
         </div>
       </section>
-      <section id="art-in-spaces" class="border-t border-white/10 bg-white/[.035]">
-        <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
-          <div class="mb-7 max-w-3xl">
-            <p class="text-xs font-semibold uppercase tracking-[.28em] text-white/50">Commercial scale · Purposeful placement</p>
-            <h2 class="artist-statement-title mt-2 text-4xl text-white sm:text-5xl">Art in Spaces</h2>
-            <p class="mt-3 text-base leading-7 text-white/65">
-              Chaotic Color Designs brings energy, identity, and a memorable sense of place to hospitality, healthcare, and corporate environments. Artwork is available for coordinated installations, project-specific sizing, large-format reproductions, and licensing.
-            </p>
+      <section class="border-t border-white/10 bg-white/[.035]">
+        <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1.15fr_.85fr] lg:items-center">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[.25em] text-white/50">For art consultants and design professionals</p>
+            <h2 class="artist-statement-title mt-3 text-4xl text-white sm:text-5xl">Curated for Your Space</h2>
+            <p class="mt-4 max-w-2xl text-base leading-7 text-white/65">Browse coordinated artwork by atmosphere—from calm healthcare and wellness palettes to bold hospitality statements, refined executive spaces, and future-forward environments.</p>
           </div>
-          <figure class="overflow-hidden rounded-3xl border border-white/10 bg-black shadow-2xl shadow-black/40">
-            <img
-              src="images/30 portfolio/mockup images/Crimson Current Hotel Lobby.png?v=20260827b"
-              alt="Crimson Current displayed as a large-scale focal artwork in an upscale hotel lobby"
-              class="aspect-[16/10] w-full object-cover"
-              loading="lazy"
-            />
-            <figcaption class="flex flex-col gap-5 border-t border-white/10 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-7">
-              <div>
-                <h3 class="text-xl font-semibold text-white">Crimson Current</h3>
-                <p class="mt-1 text-sm text-white/55">Large-scale hospitality installation concept</p>
-              </div>
-              <div class="flex flex-wrap gap-3">
-                <a href="gallery.html" class="rounded-xl border border-white/20 px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/10">Explore the collections</a>
-                <a href="mailto:ChaoticColorDesigns@gmail.com?subject=Commercial%20Art%20Project%20Inquiry" class="rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-black hover:bg-white/85">Discuss a project</a>
-              </div>
-            </figcaption>
-          </figure>
+          <div class="lg:text-right">
+            <a href="curated-spaces.html" class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black hover:bg-white/90">Explore curated atmospheres</a>
+          </div>
         </div>
       </section>
       <section id="contact" class="border-t border-white/10 bg-black">
@@ -392,7 +379,7 @@
                   <strong>Listening to the Universe</strong><br>
                   In 2024, after reaching the pinnacle of the salon industry, Chris felt a profound internal shift. Choosing to semi-retire was not an end, but an act of courage—a decision to stop directing the color and start listening to it. By surrendering to the "Macro-Organic Abstraction" of fluid acrylics, Chris moved from the controlled environment of the salon to a world where chemical reactions are volatile, high-stakes, and breathtakingly unpredictable.<br><br>
                   <strong>The Art of Chaotic Color</strong><br>
-                  Today, as the founder of Chaotic Color Designs, Chris translates thirty-five years of technical precision into kinetic works of art. Using professional-grade high-flow acrylics, Chris explores the raw beauty of "unpredictable chemistry." Each piece is a celebration of a life spent studying color—now set free to move, flow, and vibrate on the canvas in ways that are truly one-of-a-kind.
+                  Today, as the founder of Chaotic Color Designs TEST, Chris translates thirty-five years of technical precision into kinetic works of art. Using professional-grade high-flow acrylics, Chris explores the raw beauty of "unpredictable chemistry." Each piece is a celebration of a life spent studying color—now set free to move, flow, and vibrate on the canvas in ways that are truly one-of-a-kind.
                 </p>
               </div>
             </div>

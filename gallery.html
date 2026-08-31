@@ -3,13 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Chris Broussard Acrylic Paintings</title>
+    <title>Collections | Chaotic Color Designs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
     <!-- Tailwind (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+      figcaption h3 + span,
+      figcaption h4 + span {
+        display: none;
+      }
       .artist-statement-title {
         font-family: "Dancing Script", cursive;
         letter-spacing: 0.01em;
@@ -29,16 +33,17 @@
         position: static;
         display: block;
         width: fit-content;
-        margin: 0;
-        max-width: 70%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        margin: 0 auto;
+        max-width: 100%;
+        overflow: visible;
+        text-overflow: clip;
+        white-space: normal;
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 9999px;
         background: rgba(0, 0, 0, 0.55);
         padding: 0.2rem 0.7rem;
-        text-align: left;
+        text-align: center;
+        line-height: 1.35;
       }
 
       main article .flex.items-start.justify-between,
@@ -89,6 +94,12 @@
             Back to Home
           </a>
           <a
+            href="curated-spaces.html"
+            class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+          >
+            For Designers
+          </a>
+          <a
             href="#contact"
             class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
           >
@@ -110,15 +121,12 @@
           <p class="mt-3 text-base leading-7 text-white/70">
             Created with hospitality, healthcare, workplace, and residential environments in mind, each collection offers a clear visual direction while remaining available for coordinated installations, reproductions, and project-specific sizing.
           </p>
-          <p class="mt-1 text-sm text-white/50">
-            Click on image to view corresponding art in mockup.
+          <p class="mt-3 text-base font-semibold leading-7 text-white/80">
+            Each artwork is available in custom sizes to suit your space.
           </p>
-          <div class="mt-5 flex flex-wrap justify-center gap-3">
-            <a href="#fluid-frontier" class="rounded-xl border border-white/15 px-4 py-2 text-sm font-semibold text-white/80 hover:bg-white/5 hover:text-white">Fluid Frontier</a>
-            <a href="#botanical-reverie" class="rounded-xl border border-white/15 px-4 py-2 text-sm font-semibold text-white/80 hover:bg-white/5 hover:text-white">Botanical Reverie</a>
-            <a href="#living-forms" class="rounded-xl border border-white/15 px-4 py-2 text-sm font-semibold text-white/80 hover:bg-white/5 hover:text-white">Living Forms</a>
-            <a href="#future-tides" class="rounded-xl border border-white/15 px-4 py-2 text-sm font-semibold text-white/80 hover:bg-white/5 hover:text-white">Future Tides</a>
-          </div>
+          <p class="mt-1 text-sm text-white/50">
+            Click on the image to see the corresponding art in detail.
+          </p>
           <div class="mt-6">
             <a
               href="index.html"
@@ -131,14 +139,15 @@
       </section>
       <!-- Featured Signature Piece -->
       <section class="mx-auto max-w-6xl px-4 pb-8 sm:px-6">
-        <div class="mx-auto grid max-w-3xl gap-4">
+        <div class="grid gap-4 lg:grid-cols-2">
           <!-- Signature Piece -->
           <article class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="signature-piece-label px-4 pt-1 pb-1 text-white/70">SIGNATURE PIECE</div>
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Crimson Current.jpg?v=20260825b" alt="Crimson Current - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Crimson Current Hotel Lobby.png" loading="lazy" />
+              <img src="images/30 portfolio/mockup images/Signature Crimson Current Lobby.png" alt="Crimson Current displayed in a luxury hotel lobby" class="h-full w-full object-cover lightbox cursor-pointer" data-mock="images/30 portfolio/Crimson Current.jpg" loading="lazy" />
             </div>
             <div class="p-4">
+                <h2 class="text-center text-xl font-semibold tracking-tight text-white">Crimson Current</h2>
                 <div class="mt-2 flex items-start justify-between gap-2">
                   <p class="text-sm leading-6 text-white/60 text-right max-w-[70%]">
                     "The dense, swirling mass in the painting isn't just color; it’s a photograph of a hyper-active star forming region. At its core, the painting’s split composition tells the story. The top portion, with its fiery reds and deep oranges, depicts a region of immense, violent energy where newborn, massive blue-white stars are already shedding their intense ultraviolet radiation."
@@ -146,13 +155,28 @@
                 </div>
             </div>
           </article>
+          <!-- Mock Up Display -->
+          <article class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+            <div class="signature-piece-label px-4 pt-1 pb-1 text-white/70">SIGNATURE PIECE</div>
+            <div class="aspect-[4/3] w-full bg-white/5">
+              <img src="images/30 portfolio/mockup images/Signature Amber Flow Lobby.png" alt="Amber Flow displayed in a contemporary office lobby" class="h-full w-full object-cover lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Amber Flow3.JPG" loading="lazy" />
+            </div>
+            <div class="p-4">
+                <h2 class="text-center text-xl font-semibold tracking-tight text-white">Amber Flow</h2>
+                <div class="mt-2 flex items-start justify-between gap-3">
+                  <p class="text-sm leading-6 text-white/60 text-right max-w-[70%]">
+                    "To the left, waves of fiery orange and russet swirl in organic patterns reminiscent of cooling lava or polished mahogany. To the right, a calmer, sandy ochre field provides a stabilizing contrast to the dark, vein-like flow that separates the two worlds."
+                  </p>
+                </div>
+            </div>
+          </article>
         </div>
       </section>
-      <!-- Portfolio Group: Liquids -->
-      <section id="fluid-frontier" class="mx-auto max-w-6xl px-4 pb-12 sm:px-6" aria-labelledby="liquids-title">
+      <!-- Series 1: Aqueous Vibrations -->
+      <section id="collection-fluid" class="mx-auto max-w-6xl px-4 pb-12 sm:px-6" aria-labelledby="series-1-title">
         <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h2 id="liquids-title" class="artist-statement-title text-center text-3xl text-white sm:text-4xl">
+            <h2 id="series-1-title" class="artist-statement-title text-center text-3xl text-white sm:text-4xl">
               Fluid Frontier
             </h2>
             <p class="mt-1 text-sm leading-6 text-white/60">
@@ -163,7 +187,7 @@
         <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Blue Horizon.jpg?v=20260825b" alt="Blue Horizon - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Blue_Horizon_3.jpg" loading="lazy" />
+              <img src="images/30 portfolio/Fluid Frontier/Blue Horizon.jpg" alt="Blue Horizon - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Blue_Horizon_3.jpg" loading="lazy" />
             </div>
             <figcaption class="p-3">
               <div class="flex flex-col items-center justify-center gap-1 text-center">
@@ -180,82 +204,22 @@
               </div>
             </figcaption>
           </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Cerulean Swirl.jpg?v=20260825b" alt="Cerulean Swirl - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/cerulean swirll 3.JPG" loading="lazy" />
-            </div>
-            <figcaption class="p-3">
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Cerulean Swirl</h3>
-                    <span class="text-sm text-white/60">18"x24"</span>
-                  </div>
-                  <div class="mt-1">
-                    <!-- Buy button will be inserted dynamically by script -->
-                  </div>
-                </div>
-                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Blue currents spiral through open space, carrying the eye into a calm but restless field of motion.</p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Gale’s Current.jpg?v=20260825b" alt="Gale's Current - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" loading="lazy" />
-            </div>
-            <figcaption class="p-3">
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Gale's Current</h3>
-                    <span class="text-sm text-white/60">18"x24"</span>
-                  </div>
-                  <div class="mt-1">
-                    <!-- Buy button will be inserted dynamically by script -->
-                  </div>
-                </div>
-                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Wind and water pull through the composition, creating a current that feels swift, airy, and alive.</p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Neptunes Turbulance.JPG?v=20260825b" alt="Neptune's Turbulence - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Oceanic Opulance 3.JPG" loading="lazy" />
-            </div>
-            <figcaption class="p-3">
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Neptune's Turbulence</h3>
-                    <span class="text-sm text-white/60">18"x24"</span>
-                  </div>
-                  <div class="mt-1">
-                    <!-- Buy button will be inserted dynamically by script -->
-                  </div>
-                </div>
-                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Turquoise currents and gilded cells spread across a triptych, echoing reef light moving through deep water.</p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/Saturated Solitude .jpeg?v=20260825b" alt="Saturated Solitude - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Saturated Solitude 3.JPG" loading="lazy" />
-            </div>
-            <figcaption class="p-3">
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Saturated Solitude</h3>
-                    <span class="text-sm text-white/60">16"x24"</span>
-                  </div>
-                  <div class="mt-1">
-                    <!-- Buy button will be inserted dynamically by script -->
-                  </div>
-                </div>
-                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Color pools into a quiet current, where bright cells drift through deep blue stillness.</p>
-              </div>
-            </figcaption>
-          </figure>
+                    <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+                      <div class="aspect-[4/3] w-full bg-white/5">
+                        <img src="images/30 portfolio/Fluid Frontier/Christals in Rebellion.JPG" alt="Crystals in Rebellion - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Christals in Rebellion 2.JPG" loading="lazy" />
+                      </div>
+                      <figcaption class="p-3">
+                        <div class="flex items-start justify-between gap-3">
+                          <div>
+                            <div class="flex items-center gap-2">
+                              <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Crystals in Rebellion</h3>
+                              <span class="text-sm text-white/60">20&quot;x20&quot;</span>
+                            </div>
+                          </div>
+                          <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">A kinetic eruption of crystalline forms breaking free from the constraints of order, capturing the moment chaos transforms into beauty.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
               <img src="images/30 portfolio/Fluid Frontier/Life After Ice.jpg" alt="Life After Ice - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/life after ice 3.JPG" loading="lazy" />
@@ -275,7 +239,7 @@
           </figure>
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Embers in the Undertow.jpg?v=20260825b" alt="Embers in the Undertow - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer slight-zoom" data-mock="images/30 portfolio/mockup images/Embers in the Undertow 3.JPG" loading="lazy" />
+              <img src="art catalog/Embers in the Undertow 2.JPG?v=20260829a" alt="Embers in the Undertow - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer slight-zoom" data-mock="images/30 portfolio/mockup images/Embers in the Undertow 3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-3">
               <div class="flex items-start justify-between gap-3">
@@ -294,26 +258,7 @@
           </figure>
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Ember’s Ascent.JPG?v=20260825b" alt="Ember's Ascent - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" loading="lazy" />
-            </div>
-            <figcaption class="p-3">
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Ember's Ascent</h3>
-                    <span class="text-sm text-white/60">18"x24"</span>
-                  </div>
-                  <div class="mt-1">
-                    <!-- Buy button will be inserted dynamically by script -->
-                  </div>
-                </div>
-                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Warm color rises through shadow like a spark finding air, lifting heat into bright movement.</p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Luminous Lagoon .JPG?v=20260825b" alt="Luminous Lagoon - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/luminous lagoon 3.jpg" loading="lazy" />
+              <img src="art catalog/Luminous Lagoon 2.JPG" alt="Luminous Lagoon - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/luminous lagoon 3.jpg" loading="lazy" />
             </div>
             <figcaption class="p-3">
               <div class="flex items-start justify-between gap-3">
@@ -332,69 +277,35 @@
           </figure>
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Desert Veins.JPG?v=20260825b" alt="Desert Veins - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer zoomout-target" data-mock="images/30 portfolio/mockup images/desert veins.jpg" loading="lazy" />
+              <img src="art catalog/Cryogenic Current.jpg?v=20260829a" alt="Cryogenic Current - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" loading="lazy" />
             </div>
             <figcaption class="p-3">
               <div class="flex items-start justify-between gap-3">
                 <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Desert Veins</h3>
-                    <span class="text-sm text-white/60">18"x24"</span>
-                  </div>
+                  <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Cryogenic Current</h3>
                 </div>
-                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Black fissures spiderweb across the top, mimicking the parched earth of a canyon floor after a long-awaited rain has finally retreated.</p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Amethyst Abyss.JPG?v=20260825b" alt="Amethyst Abyss - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer zoomout-target slight-zoom" data-mock="images/30 portfolio/mockup images/amethyst abyss 3.JPG" loading="lazy" />
-            </div>
-            <figcaption class="p-3">
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Amethyst Abyss</h3>
-                    <span class="text-sm text-white/60">18"x24"</span>
-                  </div>
-                </div>
-                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Amethyst Abyss explores the structural depth of crystalline geometry through the lens of fluid motion.</p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/Nocturnal Reflectiontion.jpg?v=20260825b" alt="Nocturnal Reflection - pour painting by Chris Broussard" class="h-full w-full object-contain max-h-72 lightbox cursor-pointer zoomout-target medium-zoom" data-mock="images/30 portfolio/mockup images/Nocturnal Reflection 3.JPG" loading="lazy" />
-            </div>
-            <figcaption class="p-3">
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Nocturnal Reflection</h3>
-                    <span class="text-sm text-white/60">20'x20"</span>
-                  </div>
-                </div>
-                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">A meditative study of night and water, where deep blues and subtle reflections evoke the quiet energy of the nocturnal world.</p>
+                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Glacial blues and white currents surge across the surface, carrying the cold velocity of breaking ice and open water.</p>
               </div>
             </figcaption>
           </figure>
         </div>
       </section>
-      <!-- Portfolio Group: Organics -->
-      <section id="living-forms" class="mx-auto max-w-6xl px-4 pb-12 sm:px-6" aria-labelledby="organics-title">
+      <!-- Series 2: Luminous Liquidity -->
+      <!-- Combined Chromatic Flux Series (Luminous Liquidity + Chromatic Flux) -->
+      <section id="collection-future" class="mx-auto max-w-6xl px-4 pb-12 sm:px-6" aria-labelledby="series-4-title">
         <div>
-          <h2 id="organics-title" class="artist-statement-title text-center text-3xl text-white sm:text-4xl">
-            Living Forms
+          <h2 id="series-4-title" class="artist-statement-title text-center text-3xl text-white sm:text-4xl">
+            Future Tides
           </h2>
           <p class="mt-1 text-sm leading-6 text-white/60">
-            Biomorphic, geological, aquatic, and organic abstractions inspired by the repeating structures of life. These works move between the microscopic, terrestrial, and celestial.
+            Digital, geometric, architectural, and futuristic works shaped by rhythm, energy, and forward motion. This collection brings a contemporary edge to modern hospitality and workplace interiors.
           </p>
         </div>
         <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <!-- Organic Artworks -->
+          <!-- All Chromatic Flux Artworks (merged, same layout) -->
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Frozen Flare.JPG?v=20260825b" alt="Frozen Flare - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Frozen Flare 3.jpg" loading="lazy" />
+              <img src="images/30 portfolio/Chromatic Flux/Frozen Flare.JPG" alt="Frozen Flare - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Frozen Flare 3.jpg" loading="lazy" />
             </div>
             <figcaption class="p-3">
               <div class="flex items-start justify-between gap-3">
@@ -411,51 +322,13 @@
           </figure>
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Arctic Fracture.JPG?v=20260825b" alt="Arctic Fracture - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Arctic Fracture 2.jpg" loading="lazy" />
+              <img src="art catalog/Bright Ignition 2.JPG?v=20260829a" alt="Bright Ignition - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer slight-zoom" loading="lazy" />
             </div>
             <figcaption class="p-3">
               <div class="flex items-start justify-between gap-3">
                 <div>
                   <div class="flex items-center gap-2">
-                    <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Arctic Fracture</h3>
-                    <span class="text-sm text-white/60">18"x24"</span>
-                  </div>
-                  <div class="mt-1">
-                    <!-- Buy button will be inserted dynamically by script -->
-                  </div>
-                </div>
-                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Cool crystalline movement breaks across the surface, revealing pressure, depth, and luminous frozen energy.</p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Christals in Rebellion.JPG?v=20260825b" alt="Crystals in Rebellion II - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Christals in Rebellion 2.JPG" loading="lazy" />
-            </div>
-            <figcaption class="p-3">
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Crystals in Rebellion II</h3>
-                    <span class="text-sm text-white/60">18"x24"</span>
-                  </div>
-                  <div class="mt-1">
-                    <!-- Buy button will be inserted dynamically by script -->
-                  </div>
-                </div>
-                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Bands of violet, amber, and luminous white fracture across the surface, forming a charged mineral landscape in motion.</p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Metalic Flower.jpg?v=20260825b" alt="Metalic Flower - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer slight-zoom" data-mock="images/30 portfolio/mockup images/Metalic Flower 3.JPG" loading="lazy" />
-            </div>
-            <figcaption class="p-3">
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Metalic Flower</h3>
+                    <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Bright Ignition</h3>
                     <span class="text-sm text-white/60">18"x24"</span>
                   </div>
                   <div class="mt-1">
@@ -469,7 +342,7 @@
           </figure>
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Indigo Marrow.JPG?v=20260825b" alt="Indigo Marrow - pour painting by Chris Broussard" class="h-full w-full object-contain max-h-72 lightbox cursor-pointer medium-zoom" data-mock="images/30 portfolio/mockup images/Indigo Marrow 3.JPG" loading="lazy" />
+              <img src="images/30 portfolio/Chromatic Flux/Indigo Marrow.JPG" alt="Indigo Marrow - pour painting by Chris Broussard" class="h-full w-full object-contain max-h-72 lightbox cursor-pointer medium-zoom" data-mock="images/30 portfolio/mockup images/Indigo Marrow 3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-3">
               <div class="flex items-start justify-between gap-3">
@@ -488,7 +361,7 @@
           </figure>
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Magenta Monsoon.JPG?v=20260825b" alt="Magenta Monsoon - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer zoomout-target" data-mock="images/30 portfolio/mockup images/Magenta Monsoon 3.JPG" loading="lazy" />
+              <img src="images/30 portfolio/Chromatic Flux/Magenta Monsoon.JPG" alt="Magenta Monsoon - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer zoomout-target" data-mock="images/30 portfolio/mockup images/Magenta Monsoon 3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-3">
               <div class="flex items-start justify-between gap-3">
@@ -508,7 +381,7 @@
           <!-- Now add the second Chromatic Flux series artworks, using the same layout -->
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Magma Monsoon.JPG?v=20260825b" alt="Magma Monsoon - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer zoomout-target slight-zoom" data-mock="images/30 portfolio/mockup images/Magma Monsoon 3.JPG" loading="lazy" />
+              <img src="images/30 portfolio/Chromatic Flux/Magma Monsoon.JPG" alt="Magma Monsoon - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer zoomout-target slight-zoom" data-mock="images/30 portfolio/mockup images/Magma Monsoon 3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-3">
               <div class="flex items-start justify-between gap-3">
@@ -518,13 +391,29 @@
                     <span class="text-sm text-white/60">18"x24"</span>
                   </div>
                 </div>
-                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Molten reds and storm-dark currents collide in a rush of heat, movement, and electric color.</p>
+                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Every bubble and streak of acrylic represented a year of the family’s history—messy, uncontained, and bright.</p>
               </div>
             </figcaption>
           </figure>
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Solar Echoes.jpeg?v=20260825b" alt="Solar Echos - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer zoomout-target" data-mock="images/30 portfolio/mockup images/Solar Echos 3.JPG" loading="lazy" />
+              <img src="images/Desert Veins.JPG?v=20260317d" alt="Desert Veins - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer zoomout-target" data-mock="images/30 portfolio/mockup images/desert veins.jpg?v=20260317c" loading="lazy" />
+            </div>
+            <figcaption class="p-3">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Desert Veins</h3>
+                    <span class="text-sm text-white/60">18"x24"</span>
+                  </div>
+                </div>
+                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Black fissures spiderweb across the top, mimicking the parched earth of a canyon floor after a long-awaited rain has finally retreated.</p>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+            <div class="aspect-[4/3] w-full bg-white/5">
+              <img src="images/Solar_Echos.jpg?v=20260317d" alt="Solar Echos - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer zoomout-target" data-mock="images/30 portfolio/mockup images/Solar Echos 3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-3">
               <div class="flex items-start justify-between gap-3">
@@ -540,7 +429,7 @@
           </figure>
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Sunlit Stillness .JPG?v=20260825b" alt="Sunlit Stillness - pour painting by Chris Broussard" class="h-full w-full object-contain max-h-72 lightbox cursor-pointer zoomout-target medium-zoom" data-mock="images/30 portfolio/mockup images/sunlit stillness 3.jpg" loading="lazy" />
+              <img src="images/30 portfolio/Luminous Liquidity/sunlit Stillness with Dragon Fruit.jpg" alt="Sunlit Stillness - pour painting by Chris Broussard" class="h-full w-full object-contain max-h-72 lightbox cursor-pointer zoomout-target medium-zoom" data-mock="images/30 portfolio/mockup images/sunlit stillness 3.jpg" loading="lazy" />
             </div>
             <figcaption class="p-3">
               <div class="flex items-center gap-2 mb-2">
@@ -550,10 +439,107 @@
               <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Erupts with a saturated yellow that mimics a midday sun, Close to the bottom right corner, a pocket of intense, seeded red-the "dragon fruit"</p>
             </figcaption>
           </figure>
-          <!-- Former Cellular Synthesis works, now grouped under Organics -->
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Leviathans Armor.JPG?v=20260825b" alt="Leviathan's Armor - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer zoomout-target" data-mock="images/30 portfolio/mockup images/Leviathans Armor 3.JPG" loading="lazy" />
+              <img src="art catalog/Prismatic Event Horizon Edited.jpg" alt="Prismatic Event Horizon - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" />
+            </div>
+            <figcaption class="p-3">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Prismatic Event Horizon</h3>
+                </div>
+                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">A radiant vortex pulls the spectrum inward, where color, gravity, and light collapse into a single kinetic center.</p>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+            <div class="aspect-[4/3] w-full bg-white/5">
+              <img src="art catalog/Ember Wraiths.jpg?v=20260829a" alt="Ember Wraiths - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" loading="lazy" />
+            </div>
+            <figcaption class="p-3">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Ember Wraiths</h3>
+                </div>
+                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Flame-like figures coil through darkness, appearing and disappearing inside a field of molten gold and crimson.</p>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+            <div class="aspect-[4/3] w-full bg-white/5">
+              <img src="art catalog/Molten Cathedral.jpg?v=20260829a" alt="Molten Cathedral - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" loading="lazy" />
+            </div>
+            <figcaption class="p-3">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Molten Cathedral</h3>
+                </div>
+                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Molten reds and golds rise like vaulted stone, shaping a fiery sanctuary from heat, shadow, and flowing earth.</p>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+            <div class="aspect-[4/3] w-full bg-white/5">
+              <img src="art catalog/Cobalt Continuum.png" alt="Cobalt Continuum - digital abstract artwork by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" loading="lazy" />
+            </div>
+            <figcaption class="p-3">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Cobalt Continuum</h3>
+                </div>
+                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Layered cobalt currents sweep across a field of digital glyphs, translating motion into a sleek signal from the future.</p>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <!-- Series 3: Molecular Flux -->
+      <section id="collection-living" class="mx-auto max-w-6xl px-4 pb-12 sm:px-6" aria-labelledby="series-3-title">
+        <div>
+          <h2 id="series-3-title" class="artist-statement-title text-center text-3xl text-white sm:text-4xl">
+            Living Forms
+          </h2>
+          <p class="mt-1 text-sm leading-6 text-white/60">
+            Biomorphic, geological, aquatic, and organic abstractions inspired by the repeating structures of life. These works move between the microscopic, terrestrial, and celestial.
+          </p>
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+            <div class="aspect-[4/3] w-full bg-white/5">
+              <img src="art catalog/Amethyst Abyss 2.JPG?v=20260829a" alt="Amethyst Abyss - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer zoomout-target slight-zoom" data-mock="images/30 portfolio/mockup images/amethyst abyss 3.JPG" loading="lazy" />
+            </div>
+            <figcaption class="p-3">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Amethyst Abyss</h3>
+                    <span class="text-sm text-white/60">18"x24"</span>
+                  </div>
+                </div>
+                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Amethyst Abyss explores the structural depth of crystalline geometry through the lens of fluid motion.</p>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+            <div class="aspect-[4/3] w-full bg-white/5">
+              <img src="art catalog/Nocturnal Reflection.jpg?v=20260829a" alt="Nocturnal Reflection - pour painting by Chris Broussard" class="h-full w-full object-contain max-h-72 lightbox cursor-pointer zoomout-target medium-zoom" data-mock="images/30 portfolio/mockup images/Nocturnal Reflection 3.JPG" loading="lazy" />
+            </div>
+            <figcaption class="p-3">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Nocturnal Reflection</h3>
+                    <span class="text-sm text-white/60">20"x20"</span>
+                  </div>
+                </div>
+                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">A meditative study of night and water, where deep blues and subtle reflections evoke the quiet energy of the nocturnal world.</p>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+            <div class="aspect-[4/3] w-full bg-white/5">
+              <img src="images/30 portfolio/Cellular Synthesis/Leviathans Armor.JPG" alt="Leviathan's Armor - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer zoomout-target" data-mock="images/30 portfolio/mockup images/Leviathans Armor 3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-3">
               <div class="flex items-start justify-between gap-3">
@@ -569,7 +555,7 @@
           </figure>
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Crimson Current.jpg?v=20260825b" alt="Crimson Current - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer zoomout-target" data-mock="images/30 portfolio/mockup images/Crimson Current Hotel Lobby.png" loading="lazy" />
+              <img src="images/30 portfolio/Crimson Current.jpg" alt="Crimson Current - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer zoomout-target" data-mock="images/30 portfolio/mockup images/Crimson Current Hotel Lobby.png" loading="lazy" />
             </div>
             <figcaption class="p-3">
               <div class="flex items-start justify-between gap-3">
@@ -584,12 +570,52 @@
               </div>
             </figcaption>
           </figure>
+          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+            <div class="aspect-[4/3] w-full bg-white/5">
+              <img src="art catalog/Tectonic Carnival.jpg?v=20260829a" alt="Tectonic Carnival - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" loading="lazy" />
+            </div>
+            <figcaption class="p-3">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Tectonic Carnival</h3>
+                </div>
+                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Red, orange, and blue cellular forms collide like shifting continents in a jubilant field of motion.</p>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+            <div class="aspect-[4/3] w-full bg-white/5">
+              <img src="art catalog/Electric Biogenesis.jpg?v=20260829a" alt="Electric Biogenesis - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" loading="lazy" />
+            </div>
+            <figcaption class="p-3">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Electric Biogenesis</h3>
+                </div>
+                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Neon cells gather and divide across a charged field, suggesting life assembling itself from pure color.</p>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+            <div class="aspect-[4/3] w-full bg-white/5">
+              <img src="art catalog/Spectrum Colony.jpg?v=20260829a" alt="Spectrum Colony - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" loading="lazy" />
+            </div>
+            <figcaption class="p-3">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Spectrum Colony</h3>
+                </div>
+                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Bands of luminous cells organize into a shifting ecosystem, carrying the full spectrum through layers of growth and change.</p>
+              </div>
+            </figcaption>
+          </figure>
         </div>
       </section>
-      <!-- Portfolio Group: Florals -->
-      <section id="botanical-reverie" class="mx-auto max-w-6xl px-4 pb-12 sm:px-6 sm:pb-16" aria-labelledby="florals-title">
+      <!-- Series 4: Chromatic Flux -->
+      <!-- Series 5: Botanical Burst -->
+      <section id="collection-botanical" class="mx-auto max-w-6xl px-4 pb-12 sm:px-6 sm:pb-16" aria-labelledby="series-5-title">
         <div>
-          <h2 id="florals-title" class="artist-statement-title text-center text-3xl text-white sm:text-4xl">
+          <h2 id="series-5-title" class="artist-statement-title text-center text-3xl text-white sm:text-4xl">
             Botanical Reverie
           </h2>
           <p class="mt-1 text-sm leading-6 text-white/60">
@@ -599,7 +625,7 @@
         <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Bloomquake . -.JPG?v=20260825b" alt="Bloomquake - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer slight-zoom" data-mock="images/30 portfolio/mockup images/Bloomquake 3.JPG" loading="lazy" />
+              <img src="images/30 portfolio/Bloomquake . -.JPG" alt="Bloomquake - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer slight-zoom" data-mock="images/30 portfolio/mockup images/Bloomquake 3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-3">
               <div class="flex items-start justify-between gap-3">
@@ -618,64 +644,7 @@
           </figure>
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Astraeas Bloom.jpg?v=20260825b" alt="Astraea's Bloom - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" loading="lazy" />
-            </div>
-            <figcaption class="p-3">
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Astraea's Bloom</h3>
-                    <span class="text-sm text-white/60">18"x24"</span>
-                  </div>
-                  <div class="mt-1">
-                    <!-- Buy button will be inserted dynamically by script -->
-                  </div>
-                </div>
-                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">A celestial floral burst opens in layered color, balancing delicate petals with radiant, cosmic motion.</p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Emerald Zenith.jpg?v=20260825b" alt="Emerald Zenith - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" loading="lazy" />
-            </div>
-            <figcaption class="p-3">
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Emerald Zenith</h3>
-                    <span class="text-sm text-white/60">18"x24"</span>
-                  </div>
-                  <div class="mt-1">
-                    <!-- Buy button will be inserted dynamically by script -->
-                  </div>
-                </div>
-                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Green energy reaches upward in a botanical surge, bright with growth, light, and layered movement.</p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Forest Light.3 .JPG?v=20260825b" alt="Forest Light - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" loading="lazy" />
-            </div>
-            <figcaption class="p-3">
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Forest Light</h3>
-                    <span class="text-sm text-white/60">18"x24"</span>
-                  </div>
-                  <div class="mt-1">
-                    <!-- Buy button will be inserted dynamically by script -->
-                  </div>
-                </div>
-                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Soft green light filters through layered movement, evoking a living canopy shifting in quiet motion.</p>
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Vivid_Pedals.jpg?v=20260825b" alt="Vivid Pedals - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer vivid-pedals-zoom" data-mock="images/30 portfolio/mockup images/Vivid_Pedals_3.JPG?v=20260320a" loading="lazy" />
+              <img src="images/30 portfolio/Botanical Burst/Vivid_Pedals.jpg?v=20260320a" alt="Vivid Pedals - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer vivid-pedals-zoom" data-mock="images/30 portfolio/mockup images/Vivid_Pedals_3.JPG?v=20260320a" loading="lazy" />
             </div>
             <figcaption class="p-3">
               <div class="flex items-start justify-between gap-3">
@@ -694,7 +663,7 @@
           </figure>
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Floral_Kinetic.jpg?v=20260825b" alt="Floral Kinetic - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer slight-zoom" data-mock="images/30 portfolio/mockup images/Floral_Kinetic_3.JPG" loading="lazy" />
+              <img src="art catalog/Floral_Kinetic 2.JPG?v=20260829a" alt="Floral Kinetic - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer slight-zoom" data-mock="images/30 portfolio/mockup images/Floral_Kinetic_3.JPG" loading="lazy" />
             </div>
             <figcaption class="p-3">
               <div class="flex items-start justify-between gap-3">
@@ -713,7 +682,7 @@
           </figure>
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Frosts Heart.jpg?v=20260825b" alt="Frost's Heart - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/frost heart 2.jpg" loading="lazy" />
+              <img src="images/30 portfolio/Frosts Heart.jpg" alt="Frost's Heart - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/frost heart 2.jpg" loading="lazy" />
             </div>
             <figcaption class="p-3">
               <div class="flex items-start justify-between gap-3">
@@ -732,32 +701,31 @@
           </figure>
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/art catalog/Wild Wonder-cropped.png?v=20260827a" alt="Wild Wonder - floral painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/art catalog/Wild Wonder-cropped.png?v=20260827a" loading="lazy" />
+              <img src="art catalog/Orchid Faultline.jpg?v=20260829a" alt="Orchid Faultline - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" loading="lazy" />
             </div>
             <figcaption class="p-3">
               <div class="flex items-start justify-between gap-3">
                 <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Wild Wonder</h3>
-                    <span class="text-sm text-white/60">Original</span>
-                  </div>
+                  <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Orchid Faultline</h3>
                 </div>
-                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">A radiant gathering of untamed blooms, where saturated color and bold contours celebrate nature at its most exuberant.</p>
+                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">Violet, pink, black, and silver strata fracture across the surface like a floral landscape under tectonic pressure.</p>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+            <div class="aspect-[4/3] w-full bg-white/5">
+              <img src="art catalog/Rift in Bloom.jpg?v=20260829a" alt="Rift in Bloom - pour painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" loading="lazy" />
+            </div>
+            <figcaption class="p-3">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="art-title-overlay text-sm font-semibold text-white mb-0">Rift in Bloom</h3>
+                </div>
+                <p class="text-[11px] leading-5 text-white/60 text-right max-w-[70%]">White and magenta erupt through black like a flower opening along a fracture, balancing elegance with sudden force.</p>
               </div>
             </figcaption>
           </figure>
         </div>
-      </section>
-      <section id="future-tides" class="mx-auto max-w-6xl px-4 pb-12 sm:px-6 sm:pb-16" aria-labelledby="future-tides-title">
-        <div>
-          <h2 id="future-tides-title" class="artist-statement-title text-center text-3xl text-white sm:text-4xl">
-            Future Tides
-          </h2>
-          <p class="mt-1 text-sm leading-6 text-white/60">
-            Digital, geometric, architectural, and futuristic works shaped by rhythm, energy, and forward motion. This collection brings a contemporary edge to modern hospitality and workplace interiors.
-          </p>
-        </div>
-        <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"></div>
       </section>
       <!-- Contact (simple) -->
       <section id="contact" class="border-t border-white/10 bg-black">
@@ -903,50 +871,63 @@
       }
     </style>
     <script>
+      // Keep every artwork in its strongest curatorial collection while reusing
+      // the existing cards, descriptions, dimensions, and commercial mockups.
       (() => {
         const collectionForTitle = {
-          'Blue Horizon': 'fluid-frontier',
-          'Cerulean Swirl': 'fluid-frontier',
-          "Gale's Current": 'fluid-frontier',
-          "Neptune's Turbulence": 'fluid-frontier',
-          'Saturated Solitude': 'fluid-frontier',
-          'Life After Ice': 'fluid-frontier',
-          'Embers in the Undertow': 'fluid-frontier',
-          "Ember's Ascent": 'fluid-frontier',
-          'Luminous Lagoon': 'fluid-frontier',
-          'Magenta Monsoon': 'fluid-frontier',
-          'Magma Monsoon': 'fluid-frontier',
-          'Crimson Current': 'fluid-frontier',
-          'Bloomquake': 'botanical-reverie',
-          "Astraea's Bloom": 'botanical-reverie',
-          'Emerald Zenith': 'botanical-reverie',
-          'Forest Light': 'botanical-reverie',
-          'Vivid Pedals': 'botanical-reverie',
-          'Floral Kinetic': 'botanical-reverie',
-          'Wild Wonder': 'botanical-reverie',
-          'Metalic Flower': 'botanical-reverie',
-          "Frost's Heart": 'botanical-reverie',
-          'Sunlit Stillness': 'botanical-reverie',
-          'Desert Veins': 'living-forms',
-          'Amethyst Abyss': 'living-forms',
-          'Nocturnal Reflection': 'living-forms',
-          'Frozen Flare': 'living-forms',
-          'Arctic Fracture': 'living-forms',
-          'Indigo Marrow': 'living-forms',
-          "Leviathan's Armor": 'living-forms',
-          'Solar Echos': 'future-tides',
-          'Crystals in Rebellion II': 'future-tides'
+          'Blue Horizon': 'fluid',
+          'Life After Ice': 'fluid',
+          'Embers Undertow': 'fluid',
+          'Luminous Lagoon': 'fluid',
+          'Cryogenic Current': 'fluid',
+          'Magenta Monsoon': 'fluid',
+          'Magma Monsoon': 'fluid',
+          'Crimson Current': 'fluid',
+          'Bloomquake': 'botanical',
+          'Vivid Pedals': 'botanical',
+          'Floral Kinetic': 'botanical',
+          'Bright Ignition': 'botanical',
+          'Orchid Faultline': 'botanical',
+          'Rift in Bloom': 'botanical',
+          "Frost's Heart": 'botanical',
+          'Sunlit Stillness': 'botanical',
+          'Amethyst Abyss': 'living',
+          'Indigo Marrow': 'living',
+          "Leviathan's Armor": 'living',
+          'Desert Veins': 'living',
+          'Nocturnal Reflection': 'living',
+          'Frozen Flare': 'living',
+          'Tectonic Carnival': 'living',
+          'Electric Biogenesis': 'living',
+          'Spectrum Colony': 'living',
+          'Solar Echos': 'future',
+          'Prismatic Event Horizon': 'future',
+          'Ember Wraiths': 'future',
+          'Molten Cathedral': 'future',
+          'Cobalt Continuum': 'future',
+          'Crystals in Rebellion': 'future'
         };
-        const sectionOrder = ['fluid-frontier', 'botanical-reverie', 'living-forms', 'future-tides'];
-        const sections = Object.fromEntries(sectionOrder.map(id => [id, document.getElementById(id)]));
-        const grids = Object.fromEntries(sectionOrder.map(id => [id, sections[id]?.querySelector('.mt-6.grid')]));
-        document.querySelectorAll('main figure').forEach(card => {
+
+        const sections = {
+          fluid: document.querySelector('#collection-fluid'),
+          botanical: document.querySelector('#collection-botanical'),
+          living: document.querySelector('#collection-living'),
+          future: document.querySelector('#collection-future')
+        };
+        const grids = Object.fromEntries(
+          Object.entries(sections).map(([key, section]) => [key, section?.querySelector('.mt-6.grid')])
+        );
+
+        document.querySelectorAll('main figure').forEach((card) => {
           const title = card.querySelector('.art-title-overlay')?.textContent.trim();
           const destination = title && grids[collectionForTitle[title]];
           if (destination) destination.appendChild(card);
         });
-        const contact = document.getElementById('contact');
-        sectionOrder.forEach(id => { if (sections[id] && contact) contact.before(sections[id]); });
+
+        const contact = document.querySelector('#contact');
+        ['fluid', 'botanical', 'living', 'future'].forEach((key) => {
+          if (sections[key] && contact) contact.before(sections[key]);
+        });
       })();
 
       document.getElementById("year").textContent = new Date().getFullYear();
@@ -965,6 +946,14 @@
       function openLightbox(src, alt, mockSrc) {
         lightboxImg.src = src;
         lightboxImg.alt = alt || '';
+        if (!mockSrc) {
+          lightboxMock.parentElement.classList.add('hidden');
+          lightboxImg.style.maxWidth = '90vw';
+          lightbox.classList.remove('hidden');
+          return;
+        }
+        lightboxMock.parentElement.classList.remove('hidden');
+        lightboxImg.style.maxWidth = '';
         // Load the matching mock image
         const cacheBuster = 'v=' + new Date().getTime();
         let mockPath = mockSrc || 'images/30 portfolio/mockup images/mock 5.jpg';
@@ -1000,21 +989,10 @@
         lightboxMock.src = '';
         lightboxMock.alt = '';
       }
-      function addCacheBuster(path) {
-        const separator = path.includes('?') ? '&' : '?';
-        return `${path}${separator}v=${new Date().getTime()}`;
-      }
-      document.querySelectorAll('img.lightbox[data-mock]').forEach(img => {
-        const originalArtSrc = img.getAttribute('src');
-        const mockSrc = img.getAttribute('data-mock');
-        if (!originalArtSrc || !mockSrc) return;
-
-        img.setAttribute('data-art', originalArtSrc);
-      });
       document.querySelectorAll('img.lightbox').forEach(img => {
         const openFromImage = () => {
-          const artworkImage = img.getAttribute('data-art') || img.src;
-          let mockImage = img.getAttribute('data-mock') || img.src;
+          const artworkImage = img.src;
+          let mockImage = img.getAttribute('data-mock');
           const artworkTitle = img.alt || '';
           if (artworkTitle.includes('Luminous Lagoon')) {
             mockImage = 'images/30 portfolio/mockup images/luminous lagoon 2.jpg';
@@ -1029,5 +1007,3 @@
     </script>
   </body>
 </html>
-
-
