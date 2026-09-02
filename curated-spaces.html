@@ -15,6 +15,8 @@
       .art-card img { transition: transform .45s ease, filter .45s ease; }
       .art-card:hover img { transform: scale(1.035); filter: saturate(1.06); }
       .palette-dot { width: 1rem; height: 1rem; border-radius: 9999px; box-shadow: 0 0 0 1px rgba(255,255,255,.3); }
+      .placement-artwork { box-shadow: 0 18px 38px rgba(0,0,0,.38), 0 2px 8px rgba(0,0,0,.24); }
+      .lightbox-tab[aria-pressed="true"] { background: white; color: black; border-color: white; }
     </style>
   </head>
   <body class="min-h-screen bg-black text-white antialiased">
@@ -88,15 +90,37 @@
 
     <footer class="border-t border-white/10 py-8 text-center text-sm text-white/45">© 2026 Chaotic Color Designs · Chris Broussard</footer>
 
-    <div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/95 p-5" role="dialog" aria-modal="true" aria-label="Artwork preview">
-      <button id="lightbox-close" class="absolute right-5 top-5 rounded-full border border-white/25 px-4 py-2 text-sm">Close</button>
-      <img id="lightbox-image" class="max-h-[88vh] max-w-[92vw] object-contain" alt="" />
+    <div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center overflow-y-auto bg-black/95 p-4 sm:p-6" role="dialog" aria-modal="true" aria-label="Artwork preview">
+      <button id="lightbox-close" class="fixed right-4 top-4 z-20 rounded-full border border-white/25 bg-black/70 px-4 py-2 text-sm backdrop-blur hover:bg-white hover:text-black">Close</button>
+      <div class="my-auto w-full max-w-6xl py-12">
+        <div class="mb-4 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p id="lightbox-group" class="text-xs font-semibold uppercase tracking-[.2em] text-white/45"></p>
+            <h2 id="lightbox-title" class="mt-1 text-2xl font-semibold"></h2>
+          </div>
+          <div class="flex gap-2" aria-label="Artwork view">
+            <button id="view-space" class="lightbox-tab rounded-full border border-white/20 px-4 py-2 text-sm font-semibold" aria-pressed="true">View in Space</button>
+            <button id="view-artwork" class="lightbox-tab rounded-full border border-white/20 px-4 py-2 text-sm font-semibold" aria-pressed="false">Artwork</button>
+          </div>
+        </div>
+        <div id="placement-view" class="relative aspect-[3/2] overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 shadow-2xl">
+          <img id="placement-room" class="absolute inset-0 h-full w-full object-cover" alt="" />
+          <div id="placement-art-wrap" class="absolute flex items-center justify-center">
+            <img id="placement-art" class="placement-artwork max-h-full max-w-full object-contain" alt="" />
+          </div>
+        </div>
+        <div id="artwork-view" class="hidden aspect-[3/2] items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-neutral-950 p-5 sm:p-10">
+          <img id="lightbox-image" class="max-h-full max-w-full object-contain" alt="" />
+        </div>
+        <p id="lightbox-note" class="mt-4 text-center text-sm text-white/50">Conceptual placement visualization · Scale can be customized for each project.</p>
+      </div>
     </div>
 
     <script>
       const groups = [
         {
           id: 'calm-restorative', name: 'Calm & Restorative',
+          room: 'images/curated-spaces/calm-restorative-room.png', frame: [31,10,38,48],
           use: 'Healthcare · Wellness · Spa · Patient and reflection areas',
           copy: 'Soft blues, aqua, pale green, peach, and quiet movement create a composed visual rhythm for spaces designed around comfort and ease.',
           palette: ['#d8edf4','#84c8d8','#9fc7b8','#f1c5ad','#eeeaf2'],
@@ -104,13 +128,14 @@
             ['Life After Ice','images/30 portfolio/Fluid Frontier/Life After Ice.jpg'],
             ['Luminous Lagoon','art catalog/Luminous Lagoon 2.JPG'],
             ['Cobalt Continuum','art catalog/Cobalt Continuum.png'],
-            ['Cerulean Swirl','art catalog/Cerulean Swirl 2.JPG'],
-            ['Glacier Sediment','art catalog/Glacier Sediment 2.JPG'],
-            ["Neptune's Turbulence",'art catalog/Neptunes Turbulance.JPG']
+            ['Cerulean Swirl','art catalog/Cerulean Swirl 2 Signed.JPG?v=20260831a'],
+            ['Glacier Sediment','art catalog/Glacier Sediment 2 Signed.JPG?v=20260831a'],
+            ["Neptune's Turbulence",'art catalog/Neptunes Turbulance Signed.JPG?v=20260831a']
           ]
         },
         {
           id: 'warm-welcoming', name: 'Warm & Welcoming',
+          room: 'images/curated-spaces/warm-welcoming-room.png', frame: [31,8,38,46],
           use: 'Reception · Senior living · Hospitality · Residential',
           copy: 'Peach, amber, gold, and grounded earth tones bring warmth and approachability to arrival spaces and shared environments.',
           palette: ['#f3c2a9','#db9362','#c07b3c','#efd9b8','#76594b'],
@@ -123,6 +148,7 @@
         },
         {
           id: 'bold-energizing', name: 'Bold & Energizing',
+          room: 'images/curated-spaces/bold-energizing-room.png', frame: [29,9,42,50],
           use: 'Hotel lobby · Restaurant · Creative workplace · Social spaces',
           copy: 'Saturated color and forceful movement establish an immediate focal point for projects that call for energy, confidence, and visual impact.',
           palette: ['#d62b35','#f27024','#1457c4','#d33c92','#e9c832'],
@@ -135,6 +161,7 @@
         },
         {
           id: 'biophilic-organic', name: 'Biophilic & Organic',
+          room: 'images/curated-spaces/biophilic-organic-room.png', frame: [31,9,38,48],
           use: 'Healthcare · Hospitality · Wellness · Nature-led interiors',
           copy: 'Botanical gestures and biomorphic structures introduce the visual language of growth, connection, and the natural world.',
           palette: ['#709b68','#a7c684','#d79ac3','#f0c86b','#ebe7dc'],
@@ -147,6 +174,7 @@
         },
         {
           id: 'refined-sophisticated', name: 'Refined & Sophisticated',
+          room: 'images/curated-spaces/refined-sophisticated-room.png', frame: [30,9,40,49],
           use: 'Executive office · Conference room · Luxury residential · Private club',
           copy: 'Deep blues, mineral tones, restrained contrast, and elegant movement support interiors that require presence without visual noise.',
           palette: ['#142d42','#72537f','#b89558','#dcd6cc','#2c2b2a'],
@@ -159,6 +187,7 @@
         },
         {
           id: 'future-forward', name: 'Future-Forward',
+          room: 'images/curated-spaces/future-forward-room.png', frame: [27,14,46,43],
           use: 'Technology · Innovation center · Modern corporate · Contemporary hospitality',
           copy: 'Digital rhythm, prismatic color, and energized geometry give progressive environments a distinctive contemporary edge.',
           palette: ['#0b48c8','#28a7bc','#704bc4','#ef3f8f','#f1f2f3'],
@@ -175,11 +204,18 @@
       const sections = document.querySelector('#mood-sections');
       const lightbox = document.querySelector('#lightbox');
       const lightboxImage = document.querySelector('#lightbox-image');
+      const placementRoom = document.querySelector('#placement-room');
+      const placementArt = document.querySelector('#placement-art');
+      const placementArtWrap = document.querySelector('#placement-art-wrap');
+      const placementView = document.querySelector('#placement-view');
+      const artworkView = document.querySelector('#artwork-view');
+      const viewSpace = document.querySelector('#view-space');
+      const viewArtwork = document.querySelector('#view-artwork');
 
       groups.forEach((group, index) => {
         links.insertAdjacentHTML('beforeend', `<a href="#${group.id}" class="rounded-full border border-white/15 bg-black/30 px-4 py-2 text-sm text-white/70 hover:border-white/35 hover:text-white">${group.name}</a>`);
         const artCards = group.art.map(([title, image]) => `
-          <button class="art-card overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-left hover:border-white/25" data-image="${image}" data-title="${title}">
+          <button class="art-card overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-left hover:border-white/25" data-image="${image}" data-title="${title}" data-group="${group.name}" data-room="${group.room}" data-frame="${group.frame.join(',')}">
             <span class="block aspect-[4/3] overflow-hidden bg-black/40"><img src="${image}" alt="${title} by Chris Broussard" class="h-full w-full object-contain" loading="lazy" /></span>
             <span class="block p-4 text-center text-sm font-semibold">${title}</span>
           </button>`).join('');
@@ -203,12 +239,45 @@
       });
 
       document.querySelectorAll('.art-card').forEach(card => card.addEventListener('click', () => {
+        const [left, top, width, height] = card.dataset.frame.split(',');
+        placementRoom.src = card.dataset.room;
+        placementRoom.alt = `${card.dataset.group} interior placement setting`;
+        placementArt.src = card.dataset.image;
+        placementArt.alt = `${card.dataset.title} by Chris Broussard shown in a ${card.dataset.group.toLowerCase()} interior`;
+        placementArtWrap.style.left = `${left}%`;
+        placementArtWrap.style.top = `${top}%`;
+        placementArtWrap.style.width = `${width}%`;
+        placementArtWrap.style.height = `${height}%`;
         lightboxImage.src = card.dataset.image;
         lightboxImage.alt = `${card.dataset.title} by Chris Broussard`;
+        document.querySelector('#lightbox-group').textContent = card.dataset.group;
+        document.querySelector('#lightbox-title').textContent = card.dataset.title;
+        showPlacement();
         lightbox.classList.remove('hidden');
         lightbox.classList.add('flex');
         document.body.style.overflow = 'hidden';
       }));
+
+      const showPlacement = () => {
+        placementView.classList.remove('hidden');
+        artworkView.classList.add('hidden');
+        artworkView.classList.remove('flex');
+        viewSpace.setAttribute('aria-pressed', 'true');
+        viewArtwork.setAttribute('aria-pressed', 'false');
+        document.querySelector('#lightbox-note').classList.remove('hidden');
+      };
+
+      const showArtwork = () => {
+        placementView.classList.add('hidden');
+        artworkView.classList.remove('hidden');
+        artworkView.classList.add('flex');
+        viewSpace.setAttribute('aria-pressed', 'false');
+        viewArtwork.setAttribute('aria-pressed', 'true');
+        document.querySelector('#lightbox-note').classList.add('hidden');
+      };
+
+      viewSpace.addEventListener('click', showPlacement);
+      viewArtwork.addEventListener('click', showArtwork);
 
       const closeLightbox = () => {
         lightbox.classList.add('hidden');
