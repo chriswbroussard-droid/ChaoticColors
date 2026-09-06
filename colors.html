@@ -12,7 +12,7 @@
     <style>
       .display-title { font-family: "Dancing Script", cursive; }
       .filter-button[aria-pressed="true"] { background: white; color: black; border-color: white; }
-      .art-card[hidden] { display: none; }
+      .palette-group[hidden] { display: none; }
       .swatch { width: .7rem; height: .7rem; border-radius: 9999px; box-shadow: 0 0 0 1px rgba(255,255,255,.25); }
     </style>
   </head>
@@ -23,10 +23,11 @@
           <span class="block text-sm font-semibold tracking-tight">Chaotic Color Designs</span>
           <span class="block text-xs text-white/50">Chris Broussard · Austin, Texas</span>
         </a>
-        <nav class="flex items-center gap-4 text-sm" aria-label="Primary">
-          <a href="gallery.html" class="text-white/70 hover:text-white">Collections</a>
-          <a href="curated-spaces.html" class="text-white/70 hover:text-white">For Designers</a>
-          <a href="index.html#contact" class="text-white/70 hover:text-white">Contact</a>
+        <nav class="flex flex-wrap items-center gap-x-5 gap-y-2" aria-label="Primary">
+          <a href="index.html" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">Home</a>
+          <a href="gallery.html" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">Gallery</a>
+          <a href="digital-futures.html" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">Digital Future</a>
+          <a href="curated-spaces.html" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">For Designers</a>
         </nav>
       </div>
     </header>
@@ -38,7 +39,7 @@
           <p class="text-xs font-semibold uppercase tracking-[.28em] text-white/60">A specification-friendly portfolio</p>
           <h1 class="display-title mt-3 text-5xl sm:text-7xl">Explore by Color</h1>
           <p class="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">
-            Find the color. Set the atmosphere. Transform the space. Browse artwork by dominant palette for hospitality, healthcare, corporate, and interior design projects.
+            Find your palette and explore the artwork that coordinates with it. Grouped by dominant colors and strong supporting tones, these pieces help you imagine a coordinated space.
           </p>
         </div>
       </section>
@@ -56,7 +57,7 @@
         </div>
 
         <p id="result-count" class="mb-5 text-center text-sm text-white/50" aria-live="polite"></p>
-        <div id="color-grid" class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
+        <div id="color-grid" class="space-y-14"></div>
       </section>
 
       <section class="border-y border-white/10 bg-white/[.04]">
@@ -86,60 +87,122 @@
 
     <script>
       const artworks = [
-        { title: 'Blue Horizon', image: 'images/30 portfolio/Fluid Frontier/Blue Horizon.jpg', collection: 'Fluid Frontier', colors: ['blue', 'neutral'] },
-        { title: 'Life After Ice', image: 'images/30 portfolio/Fluid Frontier/Life After Ice.jpg', collection: 'Fluid Frontier', colors: ['blue', 'green', 'neutral'] },
-        { title: 'Embers in the Undertow', image: 'images/30 portfolio/Fluid Frontier/Embers in the Undertow.jpg', collection: 'Fluid Frontier', colors: ['warm', 'earth', 'neutral'] },
+        { title: 'Emerald Genesis', image: 'art catalog/Emerald Genesis.jpg?v=20260904b', collection: 'Living Forms', colors: ['green'] },
+        { title: 'Aurelian Surge', image: 'art catalog/Aurelian Surge - Living Forms.jpg', collection: 'Living Forms', colors: ['warm'] },
+        {"title": "Rift in Bloom", "image": "art catalog/Rift in Bloom - Final.jpg", "colors": ["purple"]},
+        {"title": "Ember Garden", "image": "art catalog/Ember Garden - Final.jpg", "colors": ["purple"]},
+        {"title": "Electric Biogenesis", "image": "art catalog/Electric Biogenesis.jpg", "colors": ["purple"]},
+        {"title": "Orchid Faultline", "image": "art catalog/Orchid Faultline2.jpg", "colors": ["purple"]},
+
+        { title: 'Blue Horizon', image: 'images/30 portfolio/Fluid Frontier/Blue Horizon.jpg', collection: 'Fluid Frontier', colors: ['blue'] },
+        { title: 'Life After Ice', image: 'images/30 portfolio/Fluid Frontier/Life After Ice.jpg', collection: 'Fluid Frontier', colors: ['blue', 'green'] },
+        { title: 'Embers in the Undertow', image: 'images/30 portfolio/Fluid Frontier/Embers in the Undertow.jpg', collection: 'Fluid Frontier', colors: ['warm', 'earth'] },
         { title: 'Luminous Lagoon', image: 'art catalog/Luminous Lagoon 2.JPG', collection: 'Fluid Frontier', colors: ['blue', 'green'] },
-        { title: 'Magenta Monsoon', image: 'images/30 portfolio/Chromatic Flux/Magenta Monsoon.JPG', collection: 'Fluid Frontier', colors: ['blue', 'purple', 'warm', 'multi'] },
-        { title: 'Magma Monsoon', image: 'images/30 portfolio/Chromatic Flux/Magma Monsoon.JPG', collection: 'Fluid Frontier', colors: ['blue', 'green', 'purple', 'warm', 'earth', 'multi'] },
-        { title: 'Crimson Current', image: 'images/30 portfolio/Crimson Current.jpg', collection: 'Fluid Frontier', colors: ['warm', 'earth', 'multi'] },
-        { title: 'Bloomquake', image: 'images/30 portfolio/Bloomquake . -.JPG', collection: 'Botanical Reverie', colors: ['blue', 'green', 'purple', 'warm', 'earth', 'neutral', 'multi'] },
-        { title: 'Vivid Pedals', image: 'images/30 portfolio/Botanical Burst/Vivid_Pedals.jpg', collection: 'Botanical Reverie', colors: ['blue', 'purple', 'neutral'] },
-        { title: 'Floral Kinetic', image: 'images/30 portfolio/FLORAL KINETIC.jpg', collection: 'Botanical Reverie', colors: ['green', 'purple', 'warm', 'earth', 'multi'] },
-        { title: 'Bright Ignition', image: 'art catalog/Bright Ignition 2.JPG?v=20260829a', collection: 'Botanical Reverie', colors: ['blue', 'purple', 'warm', 'earth', 'neutral', 'multi'] },
-        { title: "Frost's Heart", image: 'images/30 portfolio/Frosts Heart.jpg', collection: 'Botanical Reverie', colors: ['blue', 'green', 'purple', 'earth', 'neutral', 'multi'] },
-        { title: 'Sunlit Stillness', image: 'images/30 portfolio/Luminous Liquidity/sunlit Stillness with Dragon Fruit.jpg', collection: 'Botanical Reverie', colors: ['green', 'warm', 'earth', 'neutral', 'multi'] },
+        { title: 'Magenta Monsoon', image: 'art catalog/Magenta Monsoon left crop.jpg?v=20260905a', collection: 'Fluid Frontier', colors: ['blue', 'purple', 'warm', 'multi'] },
+        { title: 'Magma Monsoon', image: 'images/30 portfolio/Chromatic Flux/Magma Monsoon.JPG', collection: 'Fluid Frontier', colors: ['green', 'warm', 'multi'] },
+        { title: 'Crimson Current', image: 'images/30 portfolio/Crimson Current.jpg', collection: 'Fluid Frontier', colors: ['warm', 'earth'] },
+        { title: 'Bloomquake', image: 'images/30 portfolio/Bloomquake . -.JPG', collection: 'Botanical Reverie', colors: ['multi'] },
+        { title: 'Vivid Pedals', image: 'images/30 portfolio/Botanical Burst/Vivid_Pedals.jpg', collection: 'Botanical Reverie', colors: ['blue', 'purple'] },
+        { title: 'Floral Kinetic', image: 'images/30 portfolio/FLORAL KINETIC.jpg', collection: 'Botanical Reverie', colors: ['warm', 'green', 'multi'] },
+        { title: 'Bright Ignition', image: 'art catalog/Bright Ignition 2.JPG?v=20260829a', collection: 'Botanical Reverie', colors: ['purple', 'multi'] },
+        { title: "Frost's Heart", image: 'images/30 portfolio/Frosts Heart.jpg', collection: 'Botanical Reverie', colors: ['neutral'] },
+        { title: 'Ignis Fatuus', image: 'art catalog/Ignis Fatuus - Final.jpg?v=20260905a', collection: 'Fluid Frontier', colors: ['warm', 'earth'] },
         { title: 'Amethyst Abyss', image: 'images/30 portfolio/Cellular Synthesis/Amethyst Abyss.JPG', collection: 'Living Forms', colors: ['blue', 'purple'] },
-        { title: 'Indigo Marrow', image: 'images/30 portfolio/Chromatic Flux/Indigo Marrow.JPG', collection: 'Living Forms', colors: ['blue', 'purple'] },
-        { title: "Leviathan's Armor", image: 'images/30 portfolio/Cellular Synthesis/Leviathans Armor.JPG', collection: 'Living Forms', colors: ['blue', 'green', 'purple', 'warm', 'earth', 'multi'] },
-        { title: 'Desert Veins', image: 'images/Desert Veins.JPG', collection: 'Living Forms', colors: ['warm', 'earth'] },
-        { title: 'Nocturnal Reflection', image: 'art catalog/Nocturnal Reflection.jpg?v=20260829a', collection: 'Living Forms', colors: ['green', 'earth', 'neutral'] },
-        { title: 'Frozen Flare', image: 'images/30 portfolio/Chromatic Flux/Frozen Flare.JPG', collection: 'Living Forms', colors: ['blue', 'warm', 'earth', 'multi'] },
+        { title: 'Indigo Marrow', image: 'images/30 portfolio/Chromatic Flux/Indigo Marrow.JPG', collection: 'Living Forms', colors: ['purple'] },
+        { title: "Leviathan's Armor", image: 'images/30 portfolio/Cellular Synthesis/Leviathans Armor.JPG', collection: 'Living Forms', colors: ['green', 'multi'] },
+        { title: 'Desert Veins', image: 'images/Desert Veins.JPG', collection: 'Living Forms', colors: ['earth'] },
+        { title: 'Nocturnal Reflection', image: 'art catalog/Nocturnal Reflection.jpg?v=20260829a', collection: 'Living Forms', colors: ['earth'] },
         { title: 'Solar Echos', image: 'images/Solar_Echos.jpg', collection: 'Future Tides', colors: ['warm', 'earth'] },
-        { title: 'Crystals in Rebellion', image: 'images/30 portfolio/Fluid Frontier/Christals in Rebellion.JPG', collection: 'Future Tides', colors: ['purple', 'warm', 'earth', 'neutral', 'multi'] },
-        { title: 'Cobalt Continuum', image: 'art catalog/Cobalt Continuum.png', collection: 'Future Tides', colors: ['blue', 'neutral'] }
+        { title: 'Crystals in Rebellion', image: 'images/30 portfolio/Fluid Frontier/Christals in Rebellion.JPG', collection: 'Future Tides', colors: ['purple', 'earth'] },
+        { title: 'Cobalt Continuum', image: 'art catalog/Cobalt Continuum.png', collection: 'Future Tides', colors: ['blue'] }
       ];
+
+      // Explicit Blues & Aquatics selection supplied by the artist.
+      const blueArtworks = [
+  {
+    "title": "Arctic Fracture",
+    "image": "images/palette-selections/Arctic-Fracture.jpg"
+  },
+  {
+    "title": "Amethyst Abyss",
+    "image": "images/palette-selections/Amethyst-Abyss.jpg"
+  },
+  {
+    "title": "Cerulean Swirl",
+    "image": "images/palette-selections/Cerulean-Swirl.jpg"
+  },
+  {
+    "title": "Gale's Current",
+    "image": "images/palette-selections/Gales-Current.jpg"
+  },
+  {
+    "title": "Cerulean Vortex",
+    "image": "images/palette-selections/Cerulean-Vortex.jpg"
+  },
+  {
+    "title": "Blue Horizon",
+    "image": "images/palette-selections/Blue-Horizon.jpg"
+  },
+  {
+    "title": "Verdant Nectar",
+    "image": "images/palette-selections/Verdant-Nectar.jpg"
+  },
+  {
+    "title": "Iris Tempest",
+    "image": "images/palette-selections/Iris-Tempest.jpg"
+  },
+  {
+    "title": "Vivid Pedals",
+    "image": "images/palette-selections/Vivid-Pedals.jpg"
+  },
+  {
+    "title": "Cobalt Continuum",
+    "image": "images/palette-selections/Cobalt-Continuum.png"
+  }
+];
 
       const palette = { blue: '#3b82f6', green: '#22c55e', purple: '#d946ef', warm: '#ef4444', earth: '#d6a344', neutral: '#d6d3d1', multi: 'linear-gradient(135deg,#ef4444,#eab308,#22c55e,#3b82f6,#d946ef)' };
       const grid = document.querySelector('#color-grid');
       const count = document.querySelector('#result-count');
 
-      artworks.forEach((art) => {
-        const card = document.createElement('article');
-        card.className = 'art-card group overflow-hidden rounded-2xl border border-white/10 bg-white/[.045]';
-        card.dataset.colors = art.colors.join(' ');
-        card.innerHTML = `
-          <button class="block aspect-[4/3] w-full overflow-hidden bg-white/5" aria-label="View ${art.title}">
-            <img src="${art.image}" alt="${art.title} by Chris Broussard" class="h-full w-full object-contain transition duration-500 group-hover:scale-[1.035]" loading="lazy" />
-          </button>
-          <div class="p-4">
-            <div class="flex items-start justify-between gap-3">
-              <div><h2 class="font-semibold">${art.title}</h2><p class="mt-1 text-xs text-white/50">${art.collection}</p></div>
-              <div class="flex gap-1.5 pt-1" aria-label="Color palette">${art.colors.map(color => `<span class="swatch" style="background:${palette[color]}"></span>`).join('')}</div>
-            </div>
-          </div>`;
-        card.querySelector('button').addEventListener('click', () => openLightbox(art));
-        grid.appendChild(card);
+      const paletteGroups = Array.from(document.querySelectorAll('.filter-button'))
+        .filter(button => button.dataset.filter !== 'all')
+        .map(button => ({ key: button.dataset.filter, name: button.textContent.trim() }));
+
+      paletteGroups.forEach(({ key, name }) => {
+        const matches = key === 'blue' ? blueArtworks : artworks.filter(art => art.colors.includes(key));
+        const section = document.createElement('section');
+        section.className = 'palette-group';
+        section.dataset.palette = key;
+        section.setAttribute('aria-labelledby', `palette-${key}`);
+        section.innerHTML = `
+          <div class="mb-6 flex items-center gap-4 border-b border-white/15 pb-5">
+            <span aria-hidden="true" class="h-10 w-10 shrink-0 rounded-full border border-white/20" style="background:${palette[key]}"></span>
+            <div><h2 id="palette-${key}" class="text-2xl font-semibold sm:text-3xl">${name}</h2>
+              <p class="mt-1 text-sm text-white/60">${matches.length} coordinating ${matches.length === 1 ? 'artwork' : 'artworks'}</p></div>
+          </div>
+          <div class="palette-artworks grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>`;
+        matches.forEach(art => {
+          const card = document.createElement('article');
+          card.className = 'art-card group overflow-hidden rounded-2xl border border-white/10 bg-white/[.045]';
+          card.innerHTML = `
+            <button class="block aspect-[4/3] w-full overflow-hidden bg-white/5" aria-label="View ${art.title}">
+              <img src="${art.image}" alt="${art.title} by Chris Broussard" class="h-full w-full object-contain transition duration-500 group-hover:scale-[1.035]" loading="lazy" />
+            </button>
+            <div class="p-4"><h3 class="font-semibold">${art.title}</h3></div>`;
+          card.querySelector('button').addEventListener('click', () => openLightbox(art));
+          section.querySelector('.palette-artworks').appendChild(card);
+        });
+        grid.appendChild(section);
       });
 
       function applyFilter(filter) {
-        let visible = 0;
-        document.querySelectorAll('.art-card').forEach((card) => {
-          const show = filter === 'all' || card.dataset.colors.split(' ').includes(filter);
-          card.hidden = !show;
-          if (show) visible++;
+        document.querySelectorAll('.palette-group').forEach(section => {
+          section.hidden = filter !== 'all' && section.dataset.palette !== filter;
         });
-        count.textContent = `${visible} ${visible === 1 ? 'artwork' : 'artworks'} shown`;
+        count.textContent = filter === 'all'
+          ? `${paletteGroups.length} color palettes. Artwork may appear in more than one coordinating palette.`
+          : `Showing ${paletteGroups.find(group => group.key === filter).name}`;
       }
 
       document.querySelectorAll('.filter-button').forEach((button) => {
@@ -170,5 +233,6 @@
       document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeLightbox(); });
       applyFilter('all');
     </script>
+      <script src="artwork-signatures.js?v=20260905b" defer></script>
   </body>
 </html>

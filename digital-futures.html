@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painted Origins · Digital Futures | Chaotic Color Designs</title>
+    <meta name="description" content="Explore AI-influenced interpretations developed by Chris Broussard from the color, movement, and material language of his original acrylic art." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .display-title { font-family: "Dancing Script", cursive; line-height: 1.04; }
+      .art-card img { transition: transform 700ms cubic-bezier(.2,.7,.2,1), filter 700ms ease; }
+      .art-card:hover img { transform: scale(1.025); filter: saturate(1.06); }
+      .hero-glow {
+        background:
+          radial-gradient(circle at 18% 24%, rgba(27, 123, 130, .28), transparent 32%),
+          radial-gradient(circle at 82% 18%, rgba(60, 78, 214, .25), transparent 31%),
+          radial-gradient(circle at 62% 92%, rgba(185, 47, 154, .22), transparent 30%);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-black text-white antialiased">
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-black/85 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+        <a href="index.html" class="min-w-0">
+          <span class="block text-sm font-semibold tracking-tight">Chaotic Color Designs</span>
+          <span class="block text-xs text-white/50">Chris Broussard · Austin, Texas</span>
+        </a>
+        <nav class="flex flex-wrap items-center gap-x-5 gap-y-2" aria-label="Primary">
+          <a href="index.html" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">Home</a>
+          <a href="colors.html" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">by Color</a>
+          <a href="gallery.html" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">Gallery</a>
+          <a href="curated-spaces.html" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">For Designers</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-glow relative overflow-hidden border-b border-white/10">
+        <div class="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 sm:py-24">
+          <p class="text-xs font-semibold uppercase tracking-[.3em] text-white/55">A new creative frontier</p>
+          <h1 class="display-title mx-auto mt-4 max-w-5xl text-5xl text-white sm:text-7xl">Painted Origins · Digital Futures</h1>
+          <p class="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/70 sm:text-lg">
+            Original acrylic movement becomes the foundation for artist-directed, AI-influenced transformation—extending color, texture, and fluid energy into imagined architecture and otherworldly environments.
+          </p>
+          <div class="mt-8 flex flex-wrap justify-center gap-3">
+            <a href="#first-edition" class="rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black hover:bg-white/90">View the first edition</a>
+            <a href="#process" class="rounded-xl border border-white/20 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10">Explore the process</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="first-edition" class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="text-xs font-semibold uppercase tracking-[.25em] text-cyan-200/65">First edition</p>
+          <h2 class="display-title mt-3 text-4xl sm:text-6xl">Beyond the Painted Surface</h2>
+          <p class="mt-5 text-sm leading-7 text-white/65 sm:text-base">
+            Five opening works explore what happens when the material vocabulary of fluid painting expands into impossible spaces and luminous new materials. Select an image for a closer view.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 lg:grid-cols-3">
+          <figure class="art-card overflow-hidden rounded-2xl border border-white/10 bg-white/[.045]">
+            <button type="button" class="block aspect-[2/3] w-full overflow-hidden bg-white/5" data-lightbox="art catalog/AI Influenced/Infinite Estuary.jpg" aria-label="View Infinite Estuary">
+              <img src="art catalog/AI Influenced/Infinite Estuary.jpg" alt="Infinite Estuary — AI-influenced artwork by Chris Broussard" class="h-full w-full object-cover" />
+            </button>
+            <figcaption class="p-5">
+              <p class="text-[10px] font-semibold uppercase tracking-[.22em] text-cyan-200/60">AI-influenced edition</p>
+              <h3 class="mt-2 text-xl font-semibold">Infinite Estuary</h3>
+              <p class="mt-3 text-sm leading-6 text-white/60">Teal currents become monumental passageways, transforming fluid pigment into an endless architectural labyrinth.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="art-card overflow-hidden rounded-2xl border border-white/10 bg-white/[.045]">
+            <button type="button" class="block aspect-square w-full overflow-hidden bg-white/5 lg:mt-24" data-lightbox="art catalog/AI Influenced/Cascade Citadel.jpg" aria-label="View Cascade Citadel">
+              <img src="art catalog/AI Influenced/Cascade Citadel.jpg" alt="Cascade Citadel — AI-influenced artwork by Chris Broussard" class="h-full w-full object-cover" />
+            </button>
+            <figcaption class="p-5">
+              <p class="text-[10px] font-semibold uppercase tracking-[.22em] text-yellow-200/60">AI-influenced edition</p>
+              <h3 class="mt-2 text-xl font-semibold">Cascade Citadel</h3>
+              <p class="mt-3 text-sm leading-6 text-white/60">Cobalt and yellow marbling construct a dreamlike citadel where water moves through impossible stairs and arches.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="art-card overflow-hidden rounded-2xl border border-white/10 bg-white/[.045]">
+            <button type="button" class="block aspect-[2/3] w-full overflow-hidden bg-white/5" data-lightbox="art catalog/AI Influenced/Starlit Terrain.jpg" aria-label="View Starlit Terrain">
+              <img src="art catalog/AI Influenced/Starlit Terrain.jpg" alt="Starlit Terrain — AI-influenced artwork by Chris Broussard" class="h-full w-full object-cover" />
+            </button>
+            <figcaption class="p-5">
+              <p class="text-[10px] font-semibold uppercase tracking-[.22em] text-fuchsia-200/60">AI-influenced edition</p>
+              <h3 class="mt-2 text-xl font-semibold">Starlit Terrain</h3>
+              <p class="mt-3 text-sm leading-6 text-white/60">Magenta and blue strata rise into a luminous alien landscape beneath a field of distant stars.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="mx-auto mt-6 grid max-w-4xl gap-6 md:grid-cols-2">
+          <figure class="art-card overflow-hidden rounded-2xl border border-white/10 bg-white/[.045]">
+            <button type="button" class="block aspect-[2/3] w-full overflow-hidden bg-white/5" data-lightbox="art catalog/AI Influenced/Gilded Bloomlight.jpg" aria-label="View Gilded Bloomlight">
+              <img src="art catalog/AI Influenced/Gilded Bloomlight.jpg" alt="Gilded Bloomlight — AI-influenced artwork by Chris Broussard" class="h-full w-full object-cover" />
+            </button>
+            <figcaption class="p-5">
+              <p class="text-[10px] font-semibold uppercase tracking-[.22em] text-amber-200/60">AI-influenced edition</p>
+              <h3 class="mt-2 text-xl font-semibold">Gilded Bloomlight</h3>
+              <p class="mt-3 text-sm leading-6 text-white/60">Fluid blossoms are transformed into a radiant stained-glass garden, framed by jewel tones and warm gilded lines.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="art-card overflow-hidden rounded-2xl border border-white/10 bg-white/[.045]">
+            <button type="button" class="block aspect-[2/3] w-full overflow-hidden bg-white/5" data-lightbox="art catalog/AI Influenced/Cathedral Garden.jpg" aria-label="View Cathedral Garden">
+              <img src="art catalog/AI Influenced/Cathedral Garden.jpg" alt="Cathedral Garden — AI-influenced artwork by Chris Broussard" class="h-full w-full object-cover" />
+            </button>
+            <figcaption class="p-5">
+              <p class="text-[10px] font-semibold uppercase tracking-[.22em] text-fuchsia-200/60">AI-influenced edition</p>
+              <h3 class="mt-2 text-xl font-semibold">Cathedral Garden</h3>
+              <p class="mt-3 text-sm leading-6 text-white/60">A vivid floral composition becomes a glowing mosaic of color, light, and leaded-glass rhythm.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="process" class="border-y border-white/10 bg-white/[.035]">
+        <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
+          <div class="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-start">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[.25em] text-white/50">The creative process</p>
+              <h2 class="display-title mt-3 text-4xl sm:text-6xl">Human-made. Artist-directed. Digitally expanded.</h2>
+            </div>
+            <div class="grid gap-4 sm:grid-cols-3">
+              <article class="rounded-2xl border border-white/10 bg-black/35 p-5">
+                <p class="text-xs font-semibold text-cyan-200/70">01 · Painted origin</p>
+                <p class="mt-3 text-sm leading-6 text-white/60">The process begins with Chris Broussard’s original acrylic color, texture, movement, and composition.</p>
+              </article>
+              <article class="rounded-2xl border border-white/10 bg-black/35 p-5">
+                <p class="text-xs font-semibold text-fuchsia-200/70">02 · Artist direction</p>
+                <p class="mt-3 text-sm leading-6 text-white/60">The artist guides the transformation, selecting the visual concept, atmosphere, palette, and final form.</p>
+              </article>
+              <article class="rounded-2xl border border-white/10 bg-black/35 p-5">
+                <p class="text-xs font-semibold text-yellow-200/70">03 · Digital future</p>
+                <p class="mt-3 text-sm leading-6 text-white/60">AI-assisted tools extend the painted language into a new image intended for contemporary presentation and licensing.</p>
+              </article>
+            </div>
+          </div>
+          <p class="mt-8 border-l-2 border-white/20 pl-5 text-sm leading-7 text-white/55">
+            Transparency matters: works on this page are clearly identified as AI-influenced editions and are presented separately from the original-painting collections.
+          </p>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-5xl px-4 py-16 text-center sm:px-6 sm:py-24">
+        <p class="display-title text-4xl sm:text-6xl">A familiar color language, reimagined without limits.</p>
+        <p class="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/65">For licensing, hospitality concepts, large-scale installations, and project collaborations, begin a conversation about the collection.</p>
+        <a href="mailto:ChaoticColorDesigns@gmail.com?subject=Painted%20Origins%20Digital%20Futures" class="mt-8 inline-flex rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-white/90">Discuss a project</a>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 py-8 text-center text-sm text-white/45">© <span id="year"></span> Chaotic Color Designs · Chris Broussard</footer>
+
+    <div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/95 p-4 sm:p-8" role="dialog" aria-modal="true" aria-label="Artwork preview">
+      <button id="lightbox-close" type="button" class="fixed right-4 top-4 rounded-full border border-white/25 bg-black/70 px-4 py-2 text-sm hover:bg-white hover:text-black">Close</button>
+      <img id="lightbox-image" src="" alt="" class="max-h-[88vh] max-w-[92vw] rounded-xl object-contain shadow-2xl" />
+    </div>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImage = document.getElementById('lightbox-image');
+      const closeLightbox = () => {
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        lightboxImage.src = '';
+      };
+      document.querySelectorAll('[data-lightbox]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const image = button.querySelector('img');
+          lightboxImage.src = button.dataset.lightbox;
+          lightboxImage.alt = image?.alt || 'Artwork preview';
+          lightbox.classList.remove('hidden');
+          lightbox.classList.add('flex');
+        });
+      });
+      document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', (event) => { if (event.target === lightbox) closeLightbox(); });
+      document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeLightbox(); });
+    </script>
+      <script src="artwork-signatures.js?v=20260905b" defer></script>
+  </body>
+</html>

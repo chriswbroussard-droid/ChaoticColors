@@ -48,6 +48,21 @@
       name="description"
       content="Chris Broussard is a local Austin, Texas artist specializing in professional, high-quality Acrylic paintings. View selected works and contact for availability."
     />
+      <style>
+      .page-guide { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; margin-top:36px; }
+      .page-guide-card { display:flex; flex-direction:column; position:relative; overflow:hidden; min-height:290px; padding:28px; border:1px solid rgba(var(--card-rgb),.3); border-radius:20px; background:radial-gradient(ellipse at top right,rgba(var(--card-rgb),.18),transparent 72%),#111116; text-decoration:none; transition:transform .2s,border-color .2s,background-color .2s; }
+      .page-guide-card:hover { transform:translateY(-4px); border-color:var(--card-accent); background-color:#1a1820; }
+      .page-guide-card:focus-visible { outline:3px solid var(--card-accent); outline-offset:5px; }
+      .page-guide-number { color:var(--card-accent); font-size:12px; letter-spacing:.18em; margin-bottom:28px; }
+      .page-guide-card h3 { color:#fff; font-size:24px; font-weight:600; line-height:1.25; }
+      .page-guide-card p { color:#c5c3cc; font-size:14px; line-height:1.75; margin:14px 0 26px; }
+      .page-guide-link { margin-top:auto; display:flex; justify-content:space-between; gap:12px; align-items:center; color:var(--card-accent); font-size:13px; font-weight:600; }
+      .page-guide-link span { font-size:22px; }
+      #about-artist,#contact,#work { scroll-margin-top:100px; }
+      @media(max-width:900px) { .page-guide { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+      @media(max-width:560px) { .page-guide { grid-template-columns:1fr; gap:16px; } .page-guide-card { min-height:250px; padding:24px; } }
+      @media(prefers-reduced-motion:reduce) { .page-guide-card { transition:none; } .page-guide-card:hover { transform:none; } }
+    </style>
   </head>
   <body class="min-h-screen bg-black text-white antialiased">
     <header class="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur">
@@ -56,65 +71,76 @@
           <span class="text-sm font-semibold tracking-tight text-white sm:text-base">Chris Broussard</span>
           <span class="text-xs font-medium tracking-wide text-white/60 sm:text-sm">Acrylic Paintings • Austin, TX</span>
         </a>
-        <nav class="flex items-center gap-5" aria-label="Primary">
-          <a
-            href="#about-artist"
-            class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-                      >
-            About
-          </a>
-          <a
-            href="#work"
-            class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-          >
-            Work
-          </a>
-          <a
-            href="gallery.html"
-            class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-          >
-            Gallery
-          </a>
-          <a
-            href="colors.html"
-            class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-          >
-            Explore by Color
-          </a>
-          <a
-            href="curated-spaces.html"
-            class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-          >
-            For Designers
-          </a>
-          <a
-            href="#contact"
-            class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-          >
-            Contact
-          </a>
+        <nav class="flex flex-wrap items-center gap-x-5 gap-y-2" aria-label="Primary">
+          <a href="gallery.html" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">Gallery</a>
+          <a href="colors.html" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">by Color</a>
+          <a href="digital-futures.html" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">Digital Future</a>
+          <a href="curated-spaces.html" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">For Designers</a>
         </nav>
       </div>
     </header>
     <main id="top">
       <section class="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
         <div class="mx-auto max-w-2xl text-center">
+          <p class="mb-3 text-lg tracking-wide text-white/70">Welcome to the world of</p>
           <p class="artist-statement-title text-5xl font-semibold tracking-tight text-white sm:text-6xl mb-1">ChaoticColorDesigns</p>
           <h1 class="text-lg font-bold tracking-tight text-white sm:text-xl">
             Professional, high-quality Acrylic paintings.
           </h1>
           <p class="mt-3 text-base leading-7 text-white/70">
-            A minimalist portfolio featuring selected Acrylic paintings by local Austin artist Chris Broussard.
+            Explore expressive acrylic art by Austin artist Chris Broussard. Find your colors, discover the collections, and imagine art in your space.
           </p>
         </div>
       </section>
-      <section class="mx-auto max-w-6xl px-4 pb-8 sm:px-6">
-        <div class="mx-auto max-w-2xl">
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/30 portfolio/mockup images/Crimson Current Hotel Lobby.png?v=20260829a" alt="Crimson Current displayed in a hotel lobby - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer transition duration-300 ease-out hover:scale-125" loading="lazy" />
-            </div>
-          </figure>
+      <section class="mx-auto max-w-6xl px-4 pb-12 sm:px-6" aria-label="Art in a hotel lobby">
+        <figure class="mx-auto max-w-4xl overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+          <img src="images/30 portfolio/mockup images/Signature Crimson Current Lobby.png?v=20260905a" alt="Crimson Current artwork displayed in a luxury hotel lobby" class="block h-auto w-full" />
+          <figcaption class="px-5 py-4 text-center text-sm text-white/70">Imagine what color can bring to your space.</figcaption>
+        </figure>
+      </section>
+      <section id="work" class="mx-auto max-w-6xl px-4 pb-12 sm:px-6 sm:pb-16" aria-labelledby="explore-title">
+        <div class="text-center">
+          <p class="text-xs font-semibold uppercase tracking-[.25em] text-white/50">Your next discovery starts here</p>
+          <h2 id="explore-title" class="artist-statement-title mt-3 text-4xl text-white sm:text-5xl">Explore Chaotic Colors</h2>
+          <p class="mt-3 text-base leading-7 text-white/70">Find your colors, imagine your space, and get to know the artist.</p>
+        </div>
+        <div class="page-guide">
+          <a class="page-guide-card" href="gallery.html" style="--card-accent:#e879bd;--card-rgb:232,121,189">
+            <span class="page-guide-number" aria-hidden="true">01</span>
+            <h3>Explore the Gallery</h3>
+            <p>Discover the paintings, explore each collection, and find the piece that speaks to you.</p>
+            <span class="page-guide-link">Browse the collections<span aria-hidden="true">&#8599;</span></span>
+          </a>
+          <a class="page-guide-card" href="colors.html" style="--card-accent:#b7a3ff;--card-rgb:183,163,255">
+            <span class="page-guide-number" aria-hidden="true">02</span>
+            <h3>Find Your Colors</h3>
+            <p>Follow the colors you love to artwork that feels at home in your world.</p>
+            <span class="page-guide-link">Explore by color<span aria-hidden="true">&#8599;</span></span>
+          </a>
+          <a class="page-guide-card" href="curated-spaces.html" style="--card-accent:#7eddd2;--card-rgb:126,221,210">
+            <span class="page-guide-number" aria-hidden="true">03</span>
+            <h3>Art for Your Space</h3>
+            <p>Explore coordinated artwork for homes, workplaces, and hospitality spaces.</p>
+            <span class="page-guide-link">Explore curated spaces<span aria-hidden="true">&#8599;</span></span>
+          </a>
+          <a class="page-guide-card" href="digital-futures.html" style="--card-accent:#85b7ff;--card-rgb:133,183,255">
+            <span class="page-guide-number" aria-hidden="true">04</span>
+            <h3>Digital Futures</h3>
+            <p>Discover a different side of Chaotic Colors through the Digital Futures collection.</p>
+            <span class="page-guide-link">Discover Digital Futures<span aria-hidden="true">&#8599;</span></span>
+          </a>
+          <a class="page-guide-card" href="#about-artist" style="--card-accent:#f1be78;--card-rgb:241,190,120">
+            <span class="page-guide-number" aria-hidden="true">05</span>
+            <h3>Meet the Artist</h3>
+            <p>Get to know Chris Broussard and the lifelong love of color behind the work.</p>
+            <span class="page-guide-link">Read the artist story<span aria-hidden="true">&#8599;</span></span>
+          </a>
+          <a class="page-guide-card" href="#contact" style="--card-accent:#efa4ad;--card-rgb:239,164,173">
+            <span class="page-guide-number" aria-hidden="true">06</span>
+            <h3>Get in Touch</h3>
+            <p>Have a painting in mind? Ask about availability or start a conversation about your space.</p>
+            <span class="page-guide-link">Start a conversation<span aria-hidden="true">&#8599;</span></span>
+          </a>
         </div>
       </section>
       <section id="about" class="mx-auto max-w-6xl border-t border-white/10 px-4 py-12 sm:px-6">
@@ -133,200 +159,7 @@
           </div>
         </div>
       </section>
-      <section id="work" class="mx-auto max-w-6xl px-4 pb-12 sm:px-6 sm:pb-16 border-t border-white/10 pt-12">
-        <div class="text-center">
-          <h2 class="artist-statement-title text-3xl text-white sm:text-4xl">Selected Works</h2>
-          <p class="mt-2 text-sm leading-6 text-white/60">
-            A curated selection of recent work.
-          </p>
-            <p class="mt-1 text-xs text-white/50">
-              Click an image to view the artwork in its placement.
-          </p>
-        </div>
-        <div id="gallery" class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="art catalog/Starlight Tides 2.JPG?v=20260829b" alt="Starlight Tides - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/starlight tides 3.JPG" loading="lazy" />
-            </div>
-            <figcaption class="p-4">
-              <div class="flex items-center gap-2">
-                <h4 class="text-sm font-semibold text-white mb-0">Starlight Tides</h4>
-                <span class="text-sm text-white/60">20"x20"</span>
-              </div>
-              <p class="mt-2 text-xs text-white/60">Cells wheel like constellations, carried on a slow tide of light.</p>
-              <div class="mt-2">
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-                <img src="art catalog/Bright Ignition 2.JPG?v=20260829a" alt="Bright Ignition - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" loading="lazy" />
-            </div>
-            <figcaption class="p-4">
-              <div class="flex items-center gap-2">
-                  <h4 class="text-sm font-semibold text-white mb-0">Bright Ignition</h4>
-                <span class="text-sm text-white/60">20"x20"</span>
-              </div>
-              <p class="mt-2 text-xs text-white/60">Metallic petals crystallize into luminous cells, balancing structure with motion.</p>
-              <div class="mt-2">
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/30 portfolio/Chromatic Flux/Magenta Monsoon.JPG?v=20260318a" alt="Magenta Monsoon - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Magenta Monsoon 3.JPG" loading="lazy" />
-            </div>
-            <figcaption class="p-4">
-              <div class="flex items-center gap-2">
-                <h4 class="text-sm font-semibold text-white mb-0">Magenta Monsoon</h4>
-                <span class="text-sm text-white/60">16"x24"</span>
-              </div>
-              <p class="mt-2 text-xs text-white/60">Gold surges and splinters, a bright tide breaking into crystal song.</p>
-              <div class="mt-2">
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="art catalog/Floral_Kinetic 2.JPG?v=20260829b" alt="Floral Kinetic - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Floral_Kinetic_3.JPG" loading="lazy" />
-            </div>
-            <figcaption class="p-4">
-              <div class="flex items-center gap-2">
-                <h4 class="text-sm font-semibold text-white mb-0">Floral Kinetic</h4>
-                <span class="text-sm text-white/60">16"x24"</span>
-              </div>
-              <p class="mt-2 text-xs text-white/60">Petals flare and whirl, a garden held in a single breath.</p>
-              <div class="mt-2">
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/30 portfolio/Chromatic Flux/Verdant Veil.JPG?v=20260217a" alt="Verdant Veil - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Vernant Veil 3.JPG" loading="lazy" />
-            </div>
-            <figcaption class="p-4">
-              <div class="flex items-center gap-2">
-                <h4 class="text-sm font-semibold text-white mb-0">Verdant Veil</h4>
-                <span class="text-sm text-white/60">16"x24"</span>
-              </div>
-              <p class="mt-2 text-xs text-white/60">Verdant veils fold and unfurl, soft as moss after rain.</p>
-              <div class="mt-2">
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/30 portfolio/Botanical Burst/Solar Bloom.jpg?v=20260217a" alt="Solar Bloom - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Solar_bloom  3.JPG?v=20260320a" loading="lazy" />
-            </div>
-            <figcaption class="p-4">
-              <div class="flex items-center gap-2">
-                <h4 class="text-sm font-semibold text-white mb-0">Solar Bloom</h4>
-                <span class="text-sm text-white/60">16"x24"</span>
-              </div>
-              <p class="mt-2 text-xs text-white/60">Three suns open at once, spilling heat into bloom.</p>
-              <div class="mt-2">
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/30 portfolio/Fluid Frontier/Blue Horizon.jpg" alt="Blue Horizon
-               - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/blue horizon 3.JPG" loading="lazy" />
-            </div>
-            <figcaption class="p-4">
-              <div class="flex items-center gap-2">
-                <h4 class="text-sm font-semibold text-white mb-0">Blue Horizon</h4>
-                <span class="text-sm text-white/60">16"x24"</span>
-              </div>
-              <p class="mt-2 text-xs text-white/60">Deep ocean blues meet the first light of emergence.</p>
-              <div class="mt-2">
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/30 portfolio/Botanical Burst/Forest Light.JPG" alt="Forest Light - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Guilded Moss 3.JPG?v=20260320a" loading="lazy" />
-            </div>
-            <figcaption class="p-4">
-              <div class="flex items-center gap-2">
-                <h4 class="text-sm font-semibold text-white mb-0">Forest Light</h4>
-                <span class="text-sm text-white/60">16"x24"</span>
-              </div>
-              <p class="mt-2 text-xs text-white/60">Gold-dusted greens gather like forest light in shadow.</p>
-              <div class="mt-2">
-              </div>
-            </figcaption>
-          </figure>
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div class="aspect-[4/3] w-full bg-white/5">
-              <img src="images/30 portfolio/Botanical Burst/Bloomquake . - Copy.JPG" alt="Bloomquake - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" data-mock="images/30 portfolio/mockup images/Bloomquake 3.JPG" loading="lazy" />
-            </div>
-            <figcaption class="p-4">
-              <div class="flex items-center gap-2">
-                <h4 class="text-sm font-semibold text-white mb-0">Bloomquake</h4>
-                <span class="text-sm text-white/60">24"x36"</span>
-              </div>
-              <p class="mt-2 text-xs text-white/60">Bloom and tremor, a floral shockwave across the field.</p>
-              <div class="mt-2">
-              </div>
-            </figcaption>
-          </figure>
-            <!-- Placeholder for New Art Piece 1 -->
-            <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-              <div class="aspect-[4/3] w-full bg-white/5">
-                <img src="images/Saturated Solitude .jpeg" alt="Saturated Solitude - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" loading="lazy" />
-              </div>
-              <figcaption class="p-4">tali
-                <div class="flex items-center gap-2">
-                  <h4 class="text-sm font-semibold text-white mb-0">Saturated Solitude</h4>
-                  <span class="text-sm text-white/60">16&quot; x 24&quot;</span>
-                </div>
-                <p class="mt-2 text-xs text-white/60">A study in deep blues and tranquil isolation, where pigment pools into meditative silence.</p>
-                <div class="mt-2">
-                </div>
-              </figcaption>
-            </figure>
-            <!-- Placeholder for New Art Piece 2 -->
-            <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-              <div class="aspect-[4/3] w-full bg-white/5">
-                <img src="images/Effervescence .jpeg" alt="Effervescence - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" loading="lazy" />
-              </div>
-              <figcaption class="p-4">
-                <div class="flex items-center gap-2">
-                  <h4 class="text-sm font-semibold text-white mb-0">Effervecense</h4>
-                  <span class="text-sm text-white/60">16&quot; x 24&quot;</span>
-                </div>
-                <p class="mt-2 text-xs text-white/60">Bubbles of color rise and burst, capturing the fleeting joy of effervescence in motion.</p>
-                <div class="mt-2">
-                </div>
-              </figcaption>
-            </figure>
-            <!-- Placeholder for New Art Piece 3 -->
-            <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-              <div class="aspect-[4/3] w-full bg-white/5">
-                <img src="images/Infiltration .jpeg" alt="Infiltration - Acrylic painting by Chris Broussard" class="h-full w-full object-contain lightbox cursor-pointer" loading="lazy" />
-              </div>
-              <figcaption class="p-4">
-                <div class="flex items-center gap-2">
-                  <h4 class="text-sm font-semibold text-white mb-0">Infiltration</h4>
-                  <span class="text-sm text-white/60">18&quot; x 24&quot;</span>
-                </div>
-                <p class="mt-2 text-xs text-white/60">Pigments infiltrate and blend, mapping the subtle invasion of color into new territory.</p>
-                <div class="mt-2">
-                </div>
-              </figcaption>
-            </figure>
-        </div>
-        <div class="mt-8 flex justify-center">
-          <a
-            href="gallery.html"
-            class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-            aria-label="View Entire Gallery"
-          >
-            View Entire Gallery
-          </a>
-        </div>
-      </section>
+
       <section class="border-t border-white/10 bg-white/[.035]">
         <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1.15fr_.85fr] lg:items-center">
           <div>
@@ -466,8 +299,6 @@
           if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
         });
       });
-s      const lightboxImg = document.getElementById('lightbox-img');
-      const lightboxMock = document.getElementById('lightbox-mock');
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = document.getElementById('lightbox-img');
       const lightboxMock = document.getElementById('lightbox-mock');
@@ -544,5 +375,6 @@ s      const lightboxImg = document.getElementById('lightbox-img');
         });
 });
 </script>
+      <script src="artwork-signatures.js?v=20260905b" defer></script>
   </body>
 </html>
