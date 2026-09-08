@@ -106,9 +106,6 @@
         </div>
         <div id="placement-view" class="relative aspect-[3/2] overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 shadow-2xl">
           <img id="placement-room" class="absolute inset-0 h-full w-full object-cover" alt="" />
-          <div id="placement-art-wrap" class="absolute flex items-center justify-center">
-            <img id="placement-art" class="placement-artwork max-h-full max-w-full object-contain" alt="" />
-          </div>
         </div>
         <div id="artwork-view" class="hidden aspect-[3/2] items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-neutral-950 p-5 sm:p-10">
           <img id="lightbox-image" class="max-h-full max-w-full object-contain" alt="" />
@@ -206,18 +203,17 @@
       const lightbox = document.querySelector('#lightbox');
       const lightboxImage = document.querySelector('#lightbox-image');
       const placementRoom = document.querySelector('#placement-room');
-      const placementArt = document.querySelector('#placement-art');
-      const placementArtWrap = document.querySelector('#placement-art-wrap');
       const placementView = document.querySelector('#placement-view');
       const artworkView = document.querySelector('#artwork-view');
       const viewSpace = document.querySelector('#view-space');
       const viewArtwork = document.querySelector('#view-artwork');
 
+      const mockupPath = (group, title) => `images/artwork-mockups/${group.id}-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}.png`;
       groups.forEach((group, index) => {
         links.insertAdjacentHTML('beforeend', `<a href="#${group.id}" class="rounded-full border border-white/15 bg-black/30 px-4 py-2 text-sm text-white/70 hover:border-white/35 hover:text-white">${group.name}</a>`);
         const artCards = group.art.map(([title, image]) => `
-          <button class="art-card overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-left hover:border-white/25" data-image="${image}" data-title="${title}" data-group="${group.name}" data-room="${group.room}" data-frame="${group.frame.join(',')}">
-            <span class="block aspect-[4/3] overflow-hidden bg-black/40"><img src="${image}" alt="${title} by Chris Broussard" class="h-full w-full object-contain" loading="lazy" /></span>
+          <button class="art-card overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-left hover:border-white/25" data-image="${image}" data-title="${title}" data-group="${group.name}" data-room="${mockupPath(group, title)}">
+            <span class="block aspect-[3/2] overflow-hidden bg-black/40"><img src="${mockupPath(group, title)}" alt="${title} in a coordinated interior — view room mockup" class="h-full w-full object-cover" loading="lazy" /></span>
             <span class="block p-4 text-center text-sm font-semibold">${title}</span>
           </button>`).join('');
         const dots = group.palette.map(color => `<span class="palette-dot" style="background:${color}"></span>`).join('');
@@ -234,21 +230,14 @@
                   <div class="mt-4 flex items-center gap-2" aria-label="Suggested palette">${dots}</div>
                 </div>
               </div>
-              <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">${artCards}</div>
+              <div class="mt-8 grid gap-6 sm:grid-cols-2">${artCards}</div>
             </div>
           </section>`);
       });
 
       document.querySelectorAll('.art-card').forEach(card => card.addEventListener('click', () => {
-        const [left, top, width, height] = card.dataset.frame.split(',');
         placementRoom.src = card.dataset.room;
-        placementRoom.alt = `${card.dataset.group} interior placement setting`;
-        placementArt.src = card.dataset.image;
-        placementArt.alt = `${card.dataset.title} by Chris Broussard shown in a ${card.dataset.group.toLowerCase()} interior`;
-        placementArtWrap.style.left = `${left}%`;
-        placementArtWrap.style.top = `${top}%`;
-        placementArtWrap.style.width = `${width}%`;
-        placementArtWrap.style.height = `${height}%`;
+        placementRoom.alt = `${card.dataset.title} in a ${card.dataset.group.toLowerCase()} interior mockup`;
         lightboxImage.src = card.dataset.image;
         lightboxImage.alt = `${card.dataset.title} by Chris Broussard`;
         document.querySelector('#lightbox-group').textContent = card.dataset.group;
