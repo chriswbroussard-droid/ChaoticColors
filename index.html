@@ -73,9 +73,11 @@
         </a>
         <nav class="flex flex-wrap items-center gap-x-5 gap-y-2" aria-label="Primary">
           <a href="gallery.html" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">Gallery</a>
-          <a href="colors.html" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">by Color</a>
-          <a href="digital-futures.html" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">Digital Future</a>
+          <a href="colors.html" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">By Color</a>
+          <a href="digital-futures.html" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">Digital Futures</a>
           <a href="curated-spaces.html" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">For Designers</a>
+          <a href="index.html#about-artist" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">About the Artist</a>
+          <a href="index.html#contact" class="text-sm font-medium text-white/70 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">Contact</a>
         </nav>
       </div>
     </header>
@@ -206,13 +208,12 @@
                   </div>
                 </div>
                 <p class="text-sm leading-6 text-white/70">
-                  <strong>A Legacy of Color, Transformed</strong><br><br>
                   <strong>A Bold Departure</strong><br>
-                  At seventeen, Chris Broussard left a small Louisiana suburb with a singular, quiet ambition: to leave a lasting mark on the world. That journey began with a thirty-five-year career as a premier hair color specialist and a certified instructor in the Law of Color. For decades, Chris lived at the intersection of pigment and light, mastering the exacting science of chemistry to bring vision to life for others.<br><br>
+                  At seventeen, Chris Broussard left a quiet Louisiana suburb driven by a singular ambition: to leave an indelible mark on the world. This pursuit ignited a thirty-five-year legacy as a premier hair color specialist and certified instructor in the Law of Color. For decades, Chris operated at the precise intersection of pigment and light, mastering the exacting science of chemistry to manifest the visions of others.<br><br>
                   <strong>Listening to the Universe</strong><br>
-                  In 2024, after reaching the pinnacle of the salon industry, Chris felt a profound internal shift. Choosing to semi-retire was not an end, but an act of courage—a decision to stop directing the color and start listening to it. By surrendering to the "Macro-Organic Abstraction" of fluid acrylics, Chris moved from the controlled environment of the salon to a world where chemical reactions are volatile, high-stakes, and breathtakingly unpredictable.<br><br>
+                  In 2024, at the pinnacle of the salon industry, a profound internal shift occurred. Semi-retirement was not a retreat, but an evolution—a courageous choice to stop dictating color and begin listening to its inherent frequency. By surrendering to the "Macro-Organic Abstraction" of fluid acrylics, Chris traded the highly controlled environment of the salon for a world where chemical reactions are volatile, high-stakes, and breathtakingly unpredictable.<br><br>
                   <strong>The Art of Chaotic Color</strong><br>
-                  Today, as the founder of Chaotic Color Designs TEST, Chris translates thirty-five years of technical precision into kinetic works of art. Using professional-grade high-flow acrylics, Chris explores the raw beauty of "unpredictable chemistry." Each piece is a celebration of a life spent studying color—now set free to move, flow, and vibrate on the canvas in ways that are truly one-of-a-kind.
+                  Today, as the founder of Chaotic Color Designs, Chris channels thirty-five years of technical mastery into kinetic, living works of art. Utilizing professional-grade high-flow acrylics, Chris harnesses the raw, unbridled beauty of unpredictable chemistry. Each canvas is a celebration of a life dedicated to color—now liberated to flow, collide, and vibrate in entirely one-of-a-kind formations.
                 </p>
               </div>
             </div>
@@ -316,7 +317,7 @@
         console.log('Loading mockup image:', mockPath);
         lightboxMock.src = mockPath;
         lightboxMock.alt = 'Gallery mockup display';
-        lightboxMock.onerror = function() { 
+        lightboxMock.onerror = function() {
           console.error('Failed to load mockup image:', mockPath);
           console.error('Image element src:', lightboxMock.src);
         };
@@ -366,7 +367,7 @@
                     if (btn.innerText.toLowerCase().includes(artName)) {
                         const btnClone = btn.cloneNode(true);
                         btnClone.innerText = 'Buy Now';
-                        btnClone.classList.add('buy-button'); 
+                        btnClone.classList.add('buy-button');
                         btnClone.innerText = 'Buy Now';
                         h3.parentNode.insertBefore(btnClone, h3.nextSibling);
                     }
