@@ -210,10 +210,30 @@
       const viewSpace = document.querySelector('#view-space');
       const viewArtwork = document.querySelector('#view-artwork');
 
-      const mockupPath = (group, title) => `images/artwork-mockups/${group.id}-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}.png`;
+      const artworkMockups = {
+        "Life After Ice": "life after ice 3.JPG",
+        "Luminous Lagoon": "luminous lagoon 3.jpg",
+        "Cerulean Swirl": "cerulean swirll 3.JPG",
+        "Sunlit Stillness": "sunlit stillness 3.jpg",
+        "Desert Veins": "desert veins.jpg",
+        "Embers in the Undertow": "Embers in the Undertow 3.JPG",
+        "Frost's Heart": "frost heart 2.jpg",
+        "Crimson Current": "Crimson Current Hotel Lobby.png",
+        "Bright Ignition": "Metalic Flower 3.JPG",
+        "Magma Monsoon": "Magma Monsoon 3.JPG",
+        "Bloomquake": "Bloomquake 3.JPG",
+        "Floral Kinetic": "Floral Kinetic 3.jpg",
+        "Nocturnal Reflection": "Nocturnal Reflection 3.JPG",
+        "Indigo Marrow": "Indigo Marrow 3.JPG",
+        "Amethyst Abyss": "amethyst abyss 3.JPG",
+        "Electric Biogenesis": "Effervescence 3.JPG",
+        "Spectrum Colony": "genetic spectrum 2.jpg",
+        "Crystals in Rebellion": "Christals in Rebellion 2.JPG"
+};
+      const mockupPath = (group, title) => encodeURI(`images/30 portfolio/mockup images/${artworkMockups[title]}`);
       groups.forEach((group, index) => {
         links.insertAdjacentHTML('beforeend', `<a href="#${group.id}" class="rounded-full border border-white/15 bg-black/30 px-4 py-2 text-sm text-white/70 hover:border-white/35 hover:text-white">${group.name}</a>`);
-        const artCards = group.art.map(([title, image]) => `
+        const artCards = group.art.filter(([title]) => artworkMockups[title]).map(([title, image]) => `
           <button class="art-card overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-left hover:border-white/25" data-image="${image}" data-title="${title}" data-group="${group.name}" data-room="${mockupPath(group, title)}">
             <span class="block aspect-[3/2] overflow-hidden bg-black/40"><img src="${mockupPath(group, title)}" alt="${title} in a coordinated interior — view room mockup" class="h-full w-full object-cover" loading="lazy" /></span>
             <span class="block p-4 text-center text-sm font-semibold">${title}</span>
