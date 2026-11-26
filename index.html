@@ -178,18 +178,6 @@
         </div>
       </section>
 
-      <section class="border-t border-white/10 bg-white/[.035]">
-        <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1.15fr_.85fr] lg:items-center">
-          <div>
-            <p class="text-xs font-semibold uppercase tracking-[.25em] text-white/50">For art consultants and design professionals</p>
-            <h2 class="artist-statement-title mt-3 text-4xl text-white sm:text-5xl">Curated for Your Space</h2>
-            <p class="mt-4 max-w-2xl text-base leading-7 text-white/65">Browse coordinated artwork by atmosphere—from calm healthcare and wellness palettes to bold hospitality statements, refined executive spaces, and future-forward environments.</p>
-          </div>
-          <div class="lg:text-right">
-            <a href="curated-spaces.html" class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black hover:bg-white/90">Explore curated atmospheres</a>
-          </div>
-        </div>
-      </section>
       <section id="contact" class="border-t border-white/10 bg-black">
         <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div class="grid gap-10 lg:grid-cols-2 lg:items-start">
@@ -204,7 +192,8 @@
               >
                 ChaoticColorDesigns@gmail.com
               </a>
-              <div class="mt-4 space-y-3">
+            </div>
+            <div class="order-3 space-y-3 lg:col-span-2">
                 <div class="flex items-center gap-3 sm:gap-4">
                   <img
                     src="images/30%20portfolio/head%20shot.jpg"
@@ -230,25 +219,42 @@
                   <strong>The Art of Chaotic Color</strong><br>
                   Today, as the founder of Chaotic Color Designs, Chris channels thirty-five years of technical mastery into kinetic, living works of art. Utilizing professional-grade high-flow acrylics, Chris harnesses the raw, unbridled beauty of unpredictable chemistry. Each canvas is a celebration of a life dedicated to color—now liberated to flow, collide, and vibrate in entirely one-of-a-kind formations.
                 </p>
-              </div>
             </div>
-            <form id="contactForm" class="rounded-2xl border border-white/10 bg-white/5 p-6" aria-label="Contact form">
+            <form id="contactForm" class="order-2 rounded-2xl border border-white/10 bg-white/5 p-6" aria-label="Contact form">
               <div class="grid gap-4">
                 <input
                   type="text"
                   placeholder="Name"
+                  name="name"
+                  aria-label="Name"
                   required
                   class="w-full rounded-xl border border-white/10 bg-black px-3 py-2 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
                 />
                 <input
                   type="email"
                   placeholder="Email"
+                  name="email"
+                  aria-label="Email"
                   required
                   class="w-full rounded-xl border border-white/10 bg-black px-3 py-2 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
                 />
+                <fieldset class="min-w-0">
+                  <legend class="mb-3 text-sm font-semibold text-white">Print options</legend>
+                  <div class="grid gap-3 text-sm text-white/80">
+                    <label class="flex items-center gap-3"><input type="checkbox" name="printType" value="Giclee print" class="h-4 w-4 shrink-0 accent-teal-300" /> Gicl&eacute;e print</label>
+                    <label class="flex items-center gap-3"><input type="checkbox" name="printType" value="Canvas stretched" class="h-4 w-4 shrink-0 accent-teal-300" /> Canvas stretched</label>
+                    <label class="flex items-center gap-3"><input type="checkbox" name="printType" value="Canvas unstretched" class="h-4 w-4 shrink-0 accent-teal-300" /> Canvas unstretched</label>
+                  </div>
+                </fieldset>
+                <label class="grid gap-2 text-sm font-semibold text-white">
+                  Preferred size
+                  <input type="text" name="size" placeholder="e.g., 16 x 20 inches" class="w-full rounded-xl border border-white/10 bg-black px-3 py-2 text-sm font-normal text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black" />
+                </label>
                 <textarea
                   rows="5"
                   placeholder="Message"
+                  name="message"
+                  aria-label="Message"
                   required
                   class="w-full rounded-xl border border-white/10 bg-black px-3 py-2 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
                 ></textarea>
@@ -258,6 +264,7 @@
                 >
                   Send Message
                 </button>
+                <p class="text-xs leading-5 text-white/60">Opens your email app with your inquiry ready to send.</p>
                 <p class="mt-3 text-xs leading-5 text-white/60">
                   Original works will be secured and sold to collectors upon request. Because of the volatile nature of the fluid process, these specific movements, color bleeds, and textures can never be replicated. When you collect a piece of ChaoticColorsDesigns, you are an elite guardian of that specific moment in time.
                 </p>
@@ -277,7 +284,6 @@
                   <p class="text-xs text-white/50">
                     <strong>5. Return and Exchange Policy:</strong> Due to the hand-signed limited edition nature of these original works, all sales are final. No returns or exchanges are accepted.
                   </p>
-                </div>
               </div>
             </form>
           </div>
@@ -392,5 +398,6 @@
 });
 </script>
       <script src="artwork-signatures.js?v=20260905b" defer></script>
+    <script src="contact-form.js" defer></script>
   </body>
 </html>

@@ -837,18 +837,36 @@
                 <input
                   type="text"
                   placeholder="Name"
+                  name="name"
+                  aria-label="Name"
                   required
                   class="w-full rounded-xl border border-white/10 bg-black px-3 py-2 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
                 />
                 <input
                   type="email"
                   placeholder="Email"
+                  name="email"
+                  aria-label="Email"
                   required
                   class="w-full rounded-xl border border-white/10 bg-black px-3 py-2 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
                 />
+                <fieldset class="min-w-0">
+                  <legend class="mb-3 text-sm font-semibold text-white">Print options</legend>
+                  <div class="grid gap-3 text-sm text-white/80">
+                    <label class="flex items-center gap-3"><input type="checkbox" name="printType" value="Giclee print" class="h-4 w-4 shrink-0 accent-teal-300" /> Gicl&eacute;e print</label>
+                    <label class="flex items-center gap-3"><input type="checkbox" name="printType" value="Canvas stretched" class="h-4 w-4 shrink-0 accent-teal-300" /> Canvas stretched</label>
+                    <label class="flex items-center gap-3"><input type="checkbox" name="printType" value="Canvas unstretched" class="h-4 w-4 shrink-0 accent-teal-300" /> Canvas unstretched</label>
+                  </div>
+                </fieldset>
+                <label class="grid gap-2 text-sm font-semibold text-white">
+                  Preferred size
+                  <input type="text" name="size" placeholder="e.g., 16 x 20 inches" class="w-full rounded-xl border border-white/10 bg-black px-3 py-2 text-sm font-normal text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black" />
+                </label>
                 <textarea
                   rows="5"
                   placeholder="Message"
+                  name="message"
+                  aria-label="Message"
                   required
                   class="w-full rounded-xl border border-white/10 bg-black px-3 py-2 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
                 ></textarea>
@@ -858,6 +876,7 @@
                 >
                   Send Message
                 </button>
+                <p class="text-xs leading-5 text-white/60">Opens your email app with your inquiry ready to send.</p>
                 <p class="mt-3 text-xs leading-5 text-white/60">
                   Original works will be secured and sold to collectors upon request. Because of the volatile nature of the fluid process, these specific movements, color bleeds, and textures can never be replicated. When you collect a piece of ChaoticColorsDesigns, you are an elite guardian of that specific moment in time.
                 </p>
@@ -1132,13 +1151,6 @@
       })();
 
       document.getElementById("year").textContent = new Date().getFullYear();
-      const contactForm = document.getElementById("contactForm");
-      if (contactForm) {
-        contactForm.addEventListener("submit", (e) => {
-          e.preventDefault();
-          alert("Mockup form submitted. Connect to backend when ready.");
-        });
-      }
       // Lightbox functionality
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = document.getElementById('lightbox-img');
@@ -1207,5 +1219,6 @@
       document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
     </script>
       <script src="artwork-signatures.js?v=20260905b" defer></script>
+    <script src="contact-form.js" defer></script>
   </body>
 </html>
